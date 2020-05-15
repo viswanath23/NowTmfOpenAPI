@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Mapping Sheet" language="en" table="x_24823_tm_mapping_sheet">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Mapping Sheet</label>
+            <language>en</language>
+            <name>x_24823_tm_mapping_sheet</name>
+            <plural>Mapping Sheets</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-04-20 03:41:32</sys_created_on>
+            <sys_id>7d633a99db185050357d29e1ca9619fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Mapping Sheet</sys_name>
+            <sys_package display_value="Telecom Management" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Telecom Management">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_x_24823_tm_mapping_sheet__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-04-20 03:41:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

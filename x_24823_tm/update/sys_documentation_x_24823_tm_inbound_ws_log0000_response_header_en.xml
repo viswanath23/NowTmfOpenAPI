@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="response_header" label="Response Header" language="en" table="x_24823_tm_inbound_ws_log0000">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>response_header</element>
+            <help/>
+            <hint/>
+            <label>Response Header</label>
+            <language>en</language>
+            <name>x_24823_tm_inbound_ws_log0000</name>
+            <plural>Response Headers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-05-25 14:18:58</sys_created_on>
+            <sys_id>98f451f0db451010357d29e1ca9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Response Header</sys_name>
+            <sys_package display_value="Telecom Management" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Telecom Management">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_x_24823_tm_inbound_ws_log0000_response_header_en</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-05-25 14:18:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

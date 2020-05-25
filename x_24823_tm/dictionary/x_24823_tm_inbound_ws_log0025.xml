@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Inbound Requests" max_length="40" name="x_24823_tm_inbound_ws_log0025" type="collection">
+        <element attributes="encode_utf8=false" label="API Definition" max_length="32" name="api_definition" reference="sys_ws_definition" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,json_view=true" label="Request Body" max_length="1048576" name="request_body" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Request Header" max_length="1000" name="request_header" type="string"/>
+        <element attributes="edge_encryption_enabled=true,json_view=true" label="Response Body" max_length="1048576" name="response_body" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Response Header" max_length="1000" name="response_header" type="string"/>
+        <element attributes="encode_utf8=false" label="Rest Resource" max_length="32" name="rest_resource" reference="sys_ws_operation" type="reference"/>
+        <element choice="1" choice_field="status" choice_table="x_24823_tm_inbound_ws_log" default="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="api_definition"/>
+        </index>
+        <index name="index2">
+            <element name="rest_resource"/>
+        </index>
+    </element>
+</database>

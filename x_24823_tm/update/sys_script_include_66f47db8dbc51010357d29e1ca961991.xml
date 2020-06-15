@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.TMF638_ServiceInventory</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TMF638_ServiceInventory</name>
+        <script><![CDATA[var TMF638_ServiceInventory = Class.create();
+TMF638_ServiceInventory.prototype = {
+    initialize: function() {
+        this.logUtils = new x_24823_tm.InboundWsLogUtils();
+        this.logObj = "";
+        this.REST_RESOURCE_createService_id = "1e17c3dfdb701010357d29e1ca96199c";
+        this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+
+    },
+    /***
+	 * processCreateService -  Will process inbound Resource request for Create Resource Specification 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processCreateService: function(requestObj, responseObj) {
+        try {
+            this.logObj = this.logUtils.createInbLog(requestObj, this.REST_RESOURCE_createService_id);
+
+            var requestBody = requestObj.body; // Returns instance of RESTAPIRequestBody
+            var requestData = requestBody.data; //May be an array or a single object
+
+            // this.mandatoryValidationCheck(requestBody);
+            //   this.executeCreateService(requestBody);
+            this.buildCreateServiceResponse(responseObj);
+            return responseObj;
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::processCreateService >> Error occured " + err.toString());
+        }
+    },
+
+    /***
+	 * processRetrieveService -  Will process inbound Resource request for Retrieve Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processRetrieveService: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeRetrieveService();
+            this.buildRetrieveServiceResponse();
+            return;
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::processRetrieveService >> Error occured " + err.toString());
+        }
+    },
+
+    /***
+	 * processPatchService -  Will process inbound Resource request for Patch Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processPatchService: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executePatchService();
+            this.buildPatchServiceResponse();
+            return;
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::processPatchService >> Error occured " + err.toString());
+        }
+    },
+
+    /***
+	 * processDeleteService -  Will process inbound Resource request for Delete Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processDeleteService: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeDeleteService();
+            this.buildDeleteServiceResponse();
+            return;
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::processDeleteService >> Error occured " + err.toString());
+        }
+    },
+
+    /***
+	 * processListService -  Will process inbound Resource request for List Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processListService: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeListService();
+            this.buildListServiceResponse();
+            return;
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::processListService >> Error occured " + err.toString());
+        }
+    },
+
+    mandatoryValidationCheck: function() {
+        try {
+
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::mandatoryValidationCheck >> Error Occured " + err.toString());
+        }
+    },
+
+    executeCreateService: function(requestData) {
+        try {
+            var prefix = "$.";
+            if (!requestData) {
+                throw "RequestBody Data is mandatory";
+            }
+
+            if (requestData instanceof Object) {
+                /* Query the mapping matrix table to fetch the corresponding configuration for the given basetype & type. 
+                 */
+                var grMappingConfig = new GlideRecord("x_24823_tm_mapping_sheet");
+                grMappingConfig.addQuery("base_type", (requestData["@baseType"]) ? requestData["@baseType"] : "");
+                grMappingConfig.addQuery("type", (requestData["@type"]) ? requestData["@type"] : "");
+                grMappingConfig.addQuery("active", "true");
+                grMappingConfig.query();
+
+                if (grMappingConfig.next()) {
+                    var configObj = JSON.parse(grMappingConfig.configuration_data);
+                    var colMapping = configObj.columnMapping;
+
+                    var grTargetRecord = new GlideRecord(configObj.servicenowTable + "");
+                    grTargetRecord.initialize();
+                    for (var i in colMapping) {
+                        grTargetRecord.setValue(colMapping[i].servicenowColumn + "", x_24823_tm.jsonPath(requestData, prefix + colMapping[i].pathname).toString());
+                    }
+                    grTargetRecord.insert();
+                } else {
+                    throw "Active mapping configuration record not found with the BaseType {0}, Type {1}", [requestData["@baseType"], requestData["@type"]];
+                }
+
+            }
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::executeCreateService >> Error Occured " + err.toString());
+        }
+    },
+
+    buildCreateServiceResponse: function(responseObj) {
+        try {
+
+            var body = {};
+            body.message = "Service is created successfully";
+            this.logUtils.updateInbLog(this.logObj, JSON.stringify(body), "2", this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setStatus(this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setBody(body);
+        } catch (err) {
+            gs.error("TMF638_ServiceInventory::buildCreateServiceResponse >> Error Occured " + err.toString());
+        }
+    },
+    type: 'TMF638_ServiceInventory'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-05-25 16:38:55</sys_created_on>
+        <sys_id>66f47db8dbc51010357d29e1ca961991</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>TMF638_ServiceInventory</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_66f47db8dbc51010357d29e1ca961991</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 10:57:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

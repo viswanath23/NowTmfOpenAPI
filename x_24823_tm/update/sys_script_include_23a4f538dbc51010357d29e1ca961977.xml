@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.TMF637_ProductInventory</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TMF637_ProductInventory</name>
+        <script><![CDATA[var TMF637_ProductInventory = Class.create();
+TMF637_ProductInventory.prototype = {
+    initialize: function() {
+		
+		this.logUtils = new x_24823_tm.InboundWsLogUtils();
+        this.logObj = "";
+    
+        this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+    },
+	
+	/***
+	 * processCreateProduct -  Will process inbound Resource request for Create Product 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processCreateProduct: function(requestObj, responseObj,restResource_id) {
+        try {
+			this.logObj = this.logUtils.createInbLog(requestObj, this.REST_RESOURCE_createResource_id);
+
+            var requestData = requestObj.body.data; //May be an array or a single objectRESTAPIRequestBody
+           
+            // this.mandatoryValidationCheck(requestData);
+            //   this.executeCreateProduct(requestData);
+            this.buildCreateProductResponse(responseObj);
+            return responseObj;
+           
+
+        } catch (err) {
+            gs.error("TMF637_ProductInventory::processCreateProduct >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processRetrieveProduct -  Will process inbound Resource request for Retrieve Product 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processRetrieveProduct: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeRetrieveProduct();
+            this.buildRetrieveProductResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF637_ProductInventory::processRetrieveProduct >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processUpdateProduct -  Will process inbound Resource request for Update Product 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processUpdateProduct: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeUpdateProduct();
+            this.buildUpdateProductResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF637_ProductInventory::processUpdateProduct >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processDeleteProduct -  Will process inbound Resource request for Delete Product 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processDeleteProduct: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeDeleteProduct();
+            this.buildDeleteProductResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF637_ProductInventory::processDeleteProduct >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processListProduct -  Will process inbound Resource request for List Product 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processListProduct: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeListProduct();
+            this.buildListProductResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF637_ProductInventory::processListProduct >> Error occured " + err.toString());
+        }
+    },
+	
+	mandatoryValidationCheck: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::mandatoryValidationCheck >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeCreateProduct: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::executeCreateProduct >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildCreateProductResponse: function(){
+		try{
+			var body = {};
+            body.message = "Product is created successfully";
+            this.logUtils.updateInbLog(this.logObj, JSON.stringify(body), "2", this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setStatus(this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setBody(body);
+		}catch(err){
+			gs.error("TMF637_ProductInventory::buildCreateProductResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeRetrieveProduct: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::executeRetrieveProduct >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildRetrieveProductResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::buildRetrieveProductResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeUpdateProduct: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::executeUpdateProduct >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildUpdateProductResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::buildUpdateProductResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeDeleteProduct: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::executeDeleteProduct >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildDeleteProductResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::buildDeleteProductResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeListProduct: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::executeListProduct >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildListProductResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF637_ProductInventory::buildListProductResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+
+    type: 'TMF637_ProductInventory'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-05-25 16:38:23</sys_created_on>
+        <sys_id>23a4f538dbc51010357d29e1ca961977</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>TMF637_ProductInventory</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_23a4f538dbc51010357d29e1ca961977</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 13:29:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

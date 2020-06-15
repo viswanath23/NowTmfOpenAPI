@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes>edge_encryption_enabled=true,json_view=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -56,9 +56,9 @@
         <sys_id>87f455f0db451010357d29e1ca96193f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Request Header</sys_name>
-        <sys_package display_value="Telecom Management" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Telecom Management">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_dictionary_x_24823_tm_inbound_ws_log0017_request_header</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
         <sys_updated_on>2020-05-25 14:19:09</sys_updated_on>

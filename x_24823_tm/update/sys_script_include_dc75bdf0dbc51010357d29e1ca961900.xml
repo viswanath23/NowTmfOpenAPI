@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.TMF634_ResourceCatalog</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TMF634_ResourceCatalog</name>
+        <script><![CDATA[var TMF634_ResourceCatalog = Class.create();
+TMF634_ResourceCatalog.prototype = {
+    initialize: function() {
+    },
+	
+	/***
+	 * processCreateResourceCandidate -  Will process inbound Resource request for Create Resource Candidate 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processCreateResourceCandidate: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeCreateResourceCandidate();
+            this.buildCreateResourceCandidateResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processCreateResourceCandidate >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processRetrieveResourceCandidate -  Will process inbound Resource request for Retrieve Resource Candidate 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processRetrieveResourceCandidate: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeRetrieveResourceCandidate();
+            this.buildRetrieveResourceCandidateResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processRetrieveResourceCandidate >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processPatchResourceCandidate -  Will process inbound Resource request for Patch Resource Candidate 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processPatchResourceCandidate: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executePatchResourceCandidate();
+            this.buildPatchResourceCandidateResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processPatchResourceCandidate >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processDeleteResourceCandidate -  Will process inbound Resource request for Delete Resource Candidate 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processDeleteResourceCandidate: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeDeleteResourceCandidate();
+            this.buildDeleteResourceCandidateResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processDeleteResourceCandidate >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processListResourceCandidate -  Will process inbound Resource request for List Resource Candidate 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processListResourceCandidate: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeListResourceCandidate();
+            this.buildListResourceCandidateResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processListResourceCandidate >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processCreateResourceSpecification -  Will process inbound Resource request for Create Resource Specification 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processCreateResourceSpecification: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeCreateResourceSpecification();
+            this.buildCreateResourceSpecificationResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processCreateResourceSpecification >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processRetrieveResourceSpecification -  Will process inbound Resource request for Retrieve Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processRetrieveResourceSpecification: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeRetrieveResourceSpecification();
+            this.buildRetrieveResourceSpecificationResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processRetrieveResourceSpecification >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processPatchResourceSpecification -  Will process inbound Resource request for Patch Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processPatchResourceSpecification: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executePatchResourceSpecification();
+            this.buildPatchResourceSpecificationResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processPatchResourceSpecification >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processDeleteResourceSpecification -  Will process inbound Resource request for Delete Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processDeleteResourceSpecification: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeDeleteResourceSpecification();
+            this.buildDeleteResourceSpecificationResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processDeleteResourceSpecification >> Error occured " + err.toString());
+        }
+    },
+	
+	/***
+	 * processListResourceSpecification -  Will process inbound Resource request for List Resource Specification
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processListResourceSpecification: function() {
+        try {
+            var requestBody = request.getBody();
+            this.mandatoryValidationCheck();
+            this.executeListResourceSpecification();
+            this.buildListResourceSpecificationResponse();
+			return ;
+
+        } catch (err) {
+            gs.error("TMF634_ResourceCatalog::processListResourceSpecification >> Error occured " + err.toString());
+        }
+    },
+	
+	mandatoryValidationCheck: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::mandatoryValidationCheck >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeCreateResourceCandidate: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeCreateResourceCandidate >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildCreateResourceCandidateResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildCreateResourceCandidateResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeRetrieveResourceCandidate: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeRetrieveResourceCandidate >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildRetrieveResourceCandidateResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildRetrieveResourceCandidateResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executePatchResourceCandidate: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executePatchResourceCandidate >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildPatchResourceCandidateResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildPatchResourceCandidateResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeDeleteResourceCandidate: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeDeleteResourceCandidate >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildDeleteResourceCandidateResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildDeleteResourceCandidateResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeListResourceCandidate: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeListResourceCandidate >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildListResourceCandidateResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildListResourceCandidateResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeCreateResourceSpecification: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeCreateResourceSpecification >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildCreateResourceSpecificationResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildCreateResourceSpecificationResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeRetrieveResourceSpecification: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeRetrieveResourceSpecification >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildRetrieveResourceSpecificationResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildRetrieveResourceSpecificationResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executePatchResourceSpecification: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executePatchResourceSpecification >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildPatchResourceSpecificationResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildPatchResourceSpecificationResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeDeleteResourceSpecification: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeDeleteResourceSpecification >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildDeleteResourceSpecificationResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildDeleteResourceSpecificationResponse >> Error Occured " + err.toString());
+		}
+	},
+	
+	executeListResourceSpecification: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::executeListResourceSpecification >> Error Occured " + err.toString());
+		}
+	},
+	
+	buildListResourceSpecificationResponse: function(){
+		try{
+			
+		}catch(err){
+			gs.error("TMF634_ResourceCatalog::buildListResourceSpecificationResponse >> Error Occured " + err.toString());
+		}
+	},
+
+    type: 'TMF634_ResourceCatalog'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-05-25 16:40:58</sys_created_on>
+        <sys_id>dc75bdf0dbc51010357d29e1ca961900</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>TMF634_ResourceCatalog</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_dc75bdf0dbc51010357d29e1ca961900</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 08:31:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

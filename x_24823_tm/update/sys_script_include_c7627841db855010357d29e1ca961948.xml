@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.TMF641_ServiceOrder</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TMF641_ServiceOrder</name>
+        <script><![CDATA[var TMF641_ServiceOrder = Class.create();
+TMF641_ServiceOrder.prototype = {
+    initialize: function() {
+    },
+
+    type: 'TMF641_ServiceOrder'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-05-26 06:26:38</sys_created_on>
+        <sys_id>c7627841db855010357d29e1ca961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TMF641_ServiceOrder</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_c7627841db855010357d29e1ca961948</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-05-26 06:26:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

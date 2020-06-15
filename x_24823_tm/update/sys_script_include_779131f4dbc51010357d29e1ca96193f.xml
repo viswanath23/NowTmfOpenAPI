@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.InboundWsLogUtils</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>This Script Inlcude includes the common WS log Utils to inbound calls</description>
+        <name>InboundWsLogUtils</name>
+        <script><![CDATA[var InboundWsLogUtils = Class.create();
+InboundWsLogUtils.prototype = {
+    initialize: function() {
+        INBOUND_LOG_TABLE = "x_24823_tm_inbound_ws_log";
+    },
+    /***
+	 * createInbLog -  Will insert the new record in the Inbound log table
+         * @param: request - request object as passed in inbound scripted API
+         * @param: rest_api - REST API definition
+    	 * @param: rest_resource - Resource details that has been requested by the consumer
+         
+         * @return- Inbound log GlideRecod Object
+         *
+         ***/
+
+    createInbLog: function(request, resource_sysId) {
+        try {
+            var logRec = new GlideRecord(INBOUND_LOG_TABLE);
+            logRec.initialize();
+
+            if (resource_sysId) {
+                
+                var resObj = this.getRestResource(resource_sysId + ""); /*Fetch the GlideRecord object of Scripted Rest Resource based on resource sys_id */
+                if (resObj) {
+                    logRec.setValue("api_definition", resObj.getValue("web_service_definition"));
+                    logRec.setValue("rest_resource", resObj.getUniqueValue());
+                }
+
+            }
+            logRec.setValue("request_header", JSON.stringify(request.headers));
+            logRec.setValue("request_body", JSON.stringify(request.body.data));
+            logRec.setValue("uri", request.uri);
+            logRec.debug_notes = new GlideDateTime().getValue() + " UTC The request processing has started"+"\n User Session :"+gs.getSessionID()+"\nUser : "+gs.getUserID();
+
+            logRec.insert();
+            return logRec;
+        } catch (err) {
+            gs.error("InboundWsLogUtils::createOutboundLog >> Error Occured " + err.toString());
+        }
+    },
+
+
+    /***
+         * updateInbLog -  Will insert the new record in the Inbound log table
+         * @param: logGrObj - request object as passed in inbound scripted API
+         * @param: response - REST API definition
+    	 * @param: status - Resource details that has been requested by the consumer
+		 * @param: logNotes - Resource details that has been requested by the consumer
+         
+         * @return- Inbound log GlideRecod Object
+         *
+         ***/
+    updateInbLog: function(logGrObj, responsebody, status, httpStatus,logNotes) {
+        try {
+            var outlog = '';
+            if (!logGrObj) {
+                throw "The passed logGrObj is not of type GlideRecord Object";
+            }
+
+            //logGrObj.setValue("api_definition",rest_api);
+            //logGrObj.setValue("rest_resource",resource_id);
+           // logGrObj.setValue("response_header", response.header);
+            logGrObj.setValue("response_body", responsebody);
+            logGrObj.setValue("status", status);
+			logGrObj.setValue("response_status", httpStatus);
+           logGrObj.debug_notes = new GlideDateTime().getValue() + " UTC The request processing has ended\n\t" + logNotes;
+
+		
+
+            logGrObj.update();
+            return logGrObj;
+        } catch (err) {
+            gs.error("InboundWsLogUtils::updateInbLog >> Error Occured " + err.toString());
+        }
+    },
+
+
+    //Generate Universally Unique Identifier
+    generateUUID: function() {
+        var d = new Date().getTime();
+        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+        return uuid;
+    },
+
+    getRestResource: function(resource_id) {
+        try {
+            //  var encQuery = "default_operation_uri=" + uri + "^ORoperation_uri=" + uri;
+            var restResourceObj = new GlideRecord("sys_ws_operation");
+            //restResourceObj.addEncodedQuery(encQuery);
+            //restResourceObj.query();
+            if (restResourceObj.get(resource_id)) {
+                return restResourceObj;
+            }
+
+            return "";
+        } catch (err) {
+            gs.error("InboundWsLogUtils::getRestResource >> Error Occured " + err.toString());
+        }
+    },
+
+
+    type: 'InboundWsLogUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-05-25 16:36:14</sys_created_on>
+        <sys_id>779131f4dbc51010357d29e1ca96193f</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>InboundWsLogUtils</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_779131f4dbc51010357d29e1ca96193f</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 10:37:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

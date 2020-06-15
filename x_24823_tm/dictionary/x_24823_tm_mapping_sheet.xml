@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Mapping Sheet" max_length="40" name="x_24823_tm_mapping_sheet" sizeclass="0" type="collection">
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    <element audit="true" label="Mapping Sheet" max_length="40" name="x_24823_tm_mapping_sheet" sizeclass="1" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Base Type" mandatory="true" max_length="200" name="base_type" type="string"/>
+        <element attributes="json_view=true" label="Configuration Data" max_length="4000" name="configuration_data" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
-        <element attributes="edge_encryption_enabled=true" label="Type" max_length="100" name="type" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Type" mandatory="true" max_length="400" name="type" type="string" unique="true"/>
         <index name="index">
+            <element name="type"/>
+        </index>
+        <index name="index2">
             <element name="sys_class_name"/>
         </index>
     </element>

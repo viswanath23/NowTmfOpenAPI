@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Model Management" source="com.snc.model">d67f4148c41133007850fc0eb61b2913</dependency>
+        <min_version>1.0</min_version>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-14 06:58:16</sys_created_on>
+        <sys_id>48ef26cbdb911810357d29e1ca961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-14 06:58:16</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

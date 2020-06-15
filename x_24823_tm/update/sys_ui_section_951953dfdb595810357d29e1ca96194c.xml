@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Service Catalog" section_id="951953dfdb595810357d29e1ca96194c" sys_domain="global" table="cmdb_service_product_model" version="3" view="telecom">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_catalog_item</element>
+            <position>0</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:37:18</sys_created_on>
+            <sys_id>30395b9fdb595810357d29e1ca9619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Catalog" display_value="Service Catalog" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">951953dfdb595810357d29e1ca96194c</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:37:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:37:18</sys_created_on>
+            <sys_id>b4395b9fdb595810357d29e1ca9619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Catalog" display_value="Service Catalog" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">951953dfdb595810357d29e1ca96194c</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:37:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Service Catalog</caption>
+            <header>false</header>
+            <name>cmdb_service_product_model</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:36:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>951953dfdb595810357d29e1ca96194c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Service Catalog</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_ui_section_951953dfdb595810357d29e1ca96194c</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:36:47</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Telecom" name="telecom">e4675bdbdb595810357d29e1ca961970</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

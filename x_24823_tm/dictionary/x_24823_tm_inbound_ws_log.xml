@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Inbound Requests" max_length="40" name="x_24823_tm_inbound_ws_log" type="collection">
+    <element audit="true" label="Inbound Requests" max_length="40" name="x_24823_tm_inbound_ws_log" sizeclass="29" type="collection">
         <element label="API Definition" max_length="32" name="api_definition" reference="sys_ws_definition" type="reference"/>
+        <element label="Debug Notes" max_length="4000" name="debug_notes" type="journal"/>
         <element attributes="json_view=true" label="Request Body" max_length="1048576" name="request_body" type="string"/>
-        <element label="Request Header" max_length="1000" name="request_header" type="string"/>
+        <element attributes="json_view=true" label="Request Header" max_length="1000" name="request_header" type="string"/>
         <element attributes="json_view=true" label="Response Body" max_length="1048576" name="response_body" type="string"/>
         <element label="Response Header" max_length="1000" name="response_header" type="string"/>
-        <element label="Rest Resource" max_length="32" name="rest_resource" reference="sys_ws_operation" type="reference"/>
+        <element label="HTTP Response status" max_length="40" name="response_status" type="string"/>
+        <element dependent="api_definition" dependent_on_field="api_definition" label="Rest Resource" max_length="32" name="rest_resource" reference="sys_ws_operation" type="reference" use_dependent_field="true"/>
         <element choice="1" default="1" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Ready" sequence="10" value="1"/>
@@ -13,6 +15,7 @@
                 <element inactive_on_update="false" label="Error" sequence="30" value="3"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="URI" max_length="400" name="uri" type="string"/>
         <index name="index">
             <element name="api_definition"/>
         </index>

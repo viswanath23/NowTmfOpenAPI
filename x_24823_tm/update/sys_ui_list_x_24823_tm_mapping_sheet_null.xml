@@ -3,32 +3,62 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">99f5b47cdb811010357d29e1ca961986</list_id>
+            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">41a3aa8bdb511810357d29e1ca961912</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>viswanath23@gmail.com</sys_created_by>
-            <sys_created_on>2020-05-25 12:03:36</sys_created_on>
-            <sys_id>95f5b47cdb811010357d29e1ca961987</sys_id>
+            <sys_created_on>2020-06-14 06:04:49</sys_created_on>
+            <sys_id>cda3aa8bdb511810357d29e1ca961912</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-            <sys_updated_on>2020-05-25 12:03:36</sys_updated_on>
+            <sys_updated_on>2020-06-14 06:04:49</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>type</element>
-            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">99f5b47cdb811010357d29e1ca961986</list_id>
+            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">41a3aa8bdb511810357d29e1ca961912</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>viswanath23@gmail.com</sys_created_by>
-            <sys_created_on>2020-05-25 12:03:36</sys_created_on>
-            <sys_id>19f5b47cdb811010357d29e1ca961987</sys_id>
+            <sys_created_on>2020-06-14 06:04:49</sys_created_on>
+            <sys_id>c1a3aa8bdb511810357d29e1ca961913</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-            <sys_updated_on>2020-05-25 12:03:36</sys_updated_on>
+            <sys_updated_on>2020-06-14 06:04:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>base_type</element>
+            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">41a3aa8bdb511810357d29e1ca961912</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-14 06:04:49</sys_created_on>
+            <sys_id>c5a3aa8bdb511810357d29e1ca961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-14 06:04:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>configuration_data</element>
+            <list_id display_value="x_24823_tm_mapping_sheet" element="NULL" name="x_24823_tm_mapping_sheet" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">41a3aa8bdb511810357d29e1ca961912</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-14 06:04:49</sys_created_on>
+            <sys_id>c9a3aa8bdb511810357d29e1ca961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-14 06:04:49</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -42,18 +72,18 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>viswanath23@gmail.com</sys_created_by>
-            <sys_created_on>2020-05-25 12:03:36</sys_created_on>
+            <sys_created_on>2020-06-14 06:04:49</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>99f5b47cdb811010357d29e1ca961986</sys_id>
+            <sys_id>41a3aa8bdb511810357d29e1ca961912</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_24823_tm_mapping_sheet</sys_name>
-            <sys_package display_value="Telecom Management" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
             <sys_policy/>
-            <sys_scope display_value="Telecom Management">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
             <sys_update_name>sys_ui_list_x_24823_tm_mapping_sheet_null</sys_update_name>
             <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-            <sys_updated_on>2020-05-25 12:03:36</sys_updated_on>
+            <sys_updated_on>2020-06-14 06:04:49</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

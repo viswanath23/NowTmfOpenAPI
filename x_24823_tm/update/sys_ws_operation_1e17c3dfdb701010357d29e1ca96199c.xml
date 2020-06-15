@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Service</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+new x_24823_tm.TMF638_ServiceInventory().processCreateService(request,response);
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_24823_tm/v1/tmf638_service_inventory/service</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/service</relative_path>
+        <request_example>POST {apiRoot&#13;
+}/service&#13;
+Content-Type: application/json&#13;
+{&#13;
+    "serviceType": "Cloud",&#13;
+    "name": "vCPE serial 1355615",&#13;
+    "description": "Instantiation of vCPE",&#13;
+    "state": "Reserved",&#13;
+    "category": "CFS",&#13;
+    "isServiceEnabled": false,&#13;
+    "hasStarted": false,&#13;
+    "startMode": "1",&#13;
+    "isStateful": true,&#13;
+    "serviceSpecification": {&#13;
+        "id": "1212",&#13;
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecification/&#13;
+1212",&#13;
+"name": "vCPE",&#13;
+        "version": "1.0.0",&#13;
+        "@referredType": "vCPE"&#13;
+    },&#13;
+    "serviceCharacteristic": [&#13;
+        {&#13;
+            "name": "vCPE_IP",&#13;
+© TM Forum 2018. All Rights Reserved Page 23 of 36&#13;
+TMF638 Service Inventory API REST Specification&#13;
+"valueType": "object",&#13;
+            "value": {&#13;
+                "@type": "IPAddress",&#13;
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/IPAddress.schema.json",&#13;
+                "address": "193.218.236.21"&#13;
+            }&#13;
+        }&#13;
+    ],&#13;
+    "serviceRelationship": [&#13;
+        {&#13;
+            "relationshipType": "DependentOn",&#13;
+            "service": {&#13;
+                "href": "https://mycsp.com:8080/tmf-api/serviceInventoryManagement/v3/service/5645",&#13;
+                "id": "5645",&#13;
+                "@referredType": "vOS"&#13;
+            }&#13;
+        }&#13;
+    ],&#13;
+    "relatedParty": [&#13;
+        {&#13;
+            "href": "mycsp.com:8080/tmf-api/partyManagement/v4/party/456",&#13;
+            "id": "456",&#13;
+            "name": "John Doe",&#13;
+            "role": "user"&#13;
+        }&#13;
+    ],&#13;
+    "serviceOrder": [&#13;
+        {&#13;
+            "href": "https://mycsp.com:8080/tmf-api/serviceOrderManagement/v3/serviceOrder/42",&#13;
+            "id": "42",&#13;
+            "serviceOrderItemId": "1"&#13;
+        }&#13;
+    ],&#13;
+    "place": [&#13;
+        {&#13;
+            "href": "https://mycsp.com:8080/tmf-api/addressManagement/v3/place/2435",&#13;
+            "id": "2435",&#13;
+            "name": "Customer primary location",&#13;
+            "role": "InstallationAddress"&#13;
+        }&#13;
+    ],&#13;
+    "@type": "vCPE",&#13;
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/vCPE.schema.json",&#13;
+    "@baseType": "Service"&#13;
+}</request_example>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>This operation creates a service entity.</short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-21 06:47:35</sys_created_on>
+        <sys_id>1e17c3dfdb701010357d29e1ca96199c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Service</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_ws_operation_1e17c3dfdb701010357d29e1ca96199c</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 10:38:41</sys_updated_on>
+        <web_service_definition display_value="TMF638 Service Inventory Management">d562071bdb701010357d29e1ca96197f</web_service_definition>
+        <web_service_version display_value="v1">87a6eb89db511010357d29e1ca9619bc</web_service_version>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="DELETE">
+        <group/>
+        <hidden>false</hidden>
+        <name>request</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-11 04:45:09</sys_created_on>
+        <sys_id>bca4ba0edb91d010357d29e1ca9619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_ui_view_bca4ba0edb91d010357d29e1ca9619fd</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-11 04:45:09</sys_updated_on>
+        <title>Request</title>
+        <user/>
+    </sys_ui_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</application>
+        <file_path/>
+        <instance_id>1af89848db38bb003050ac44d496195f</instance_id>
+        <instance_name>dev79735</instance_name>
+        <name>sys_ui_view_bca4ba0edb91d010357d29e1ca9619fd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>request</name><roles/><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>viswanath23@gmail.com</sys_created_by><sys_created_on>2020-06-11 04:45:09</sys_created_on><sys_id>bca4ba0edb91d010357d29e1ca9619fd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Request</sys_name><sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package><sys_policy/><sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope><sys_update_name>sys_ui_view_bca4ba0edb91d010357d29e1ca9619fd</sys_update_name><sys_updated_by>viswanath23@gmail.com</sys_updated_by><sys_updated_on>2020-06-11 04:45:09</sys_updated_on><title>Request</title><user/></sys_ui_view></record_update>]]></payload>
+        <payload_hash>-1103367583</payload_hash>
+        <record_name>Request</record_name>
+        <reverted_from/>
+        <source>a6b02cfcdb011010357d29e1ca9619b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-11 04:45:10</sys_created_on>
+        <sys_id>45a4fa0edb91d010357d29e1ca961900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172a1b234340000001</sys_recorded_at>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-11 04:45:10</sys_updated_on>
+        <type>UI View</type>
+        <update_guid>4da4ba0e3c91d0100edc2468a9335dff</update_guid>
+        <update_guid_history>4da4ba0e3c91d0100edc2468a9335dff:-1103367583</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-14 06:01:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_view">sys_ui_view</sys_db_object>
+        <sys_id>45222d6a86fb46eca23b432d9b098210</sys_id>
+        <sys_metadata>bca4ba0edb91d010357d29e1ca9619fd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope_delete display_value="">531a72eddb4d4eea9fa4f90fe2196364</sys_scope_delete>
+        <sys_update_name>sys_ui_view_bca4ba0edb91d010357d29e1ca9619fd</sys_update_name>
+        <sys_update_version display_value="sys_ui_view_bca4ba0edb91d010357d29e1ca9619fd">45a4fa0edb91d010357d29e1ca961900</sys_update_version>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-14 06:01:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -10,7 +10,7 @@
         <license_model>none</license_model>
         <logo>4d8076d5dbd45050357d29e1ca9619d2</logo>
         <menu/>
-        <name>Telecom Management</name>
+        <name>TMF OpenApi Connector</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -25,9 +25,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-04-20 03:28:50</sys_created_on>
         <sys_id>f770b6d1db185050357d29e1ca96196f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-04-20 03:29:03</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-05-26 06:22:48</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>

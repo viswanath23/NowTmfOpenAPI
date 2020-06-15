@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>false</active>
-        <application display_value="Telecom Management">1ea3f619db185050357d29e1ca961920</application>
+        <application display_value="TMF OpenApi Connector">1ea3f619db185050357d29e1ca961920</application>
         <assessment/>
         <content_page/>
         <device_type/>
@@ -9,7 +9,7 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>NEW</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
         <mobile_title>Create New</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
@@ -25,17 +25,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>aaa3be99db185050357d29e1ca9619fe</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Create New</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Mapping Matrix</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Telecom Management" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Telecom Management">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_app_module_aaa3be99db185050357d29e1ca9619fe</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-05-25 11:52:56</sys_updated_on>
+        <sys_updated_on>2020-06-13 02:29:01</sys_updated_on>
         <timeline_page/>
-        <title>Create New</title>
+        <title>Mapping Matrix</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

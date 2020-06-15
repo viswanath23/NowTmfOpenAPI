@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="151953dfdb595810357d29e1ca96194a" sys_domain="global" table="cmdb_service_product_model" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:36:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>991953dfdb595810357d29e1ca96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="cmdb_service_product_model" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">151953dfdb595810357d29e1ca96194a</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">6c675bdbdb595810357d29e1ca961976</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:36:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:36:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d11953dfdb595810357d29e1ca96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="cmdb_service_product_model" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">151953dfdb595810357d29e1ca96194a</sys_ui_form>
+            <sys_ui_section caption="Service Catalog" display_value="Service Catalog" name="cmdb_service_product_model" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">951953dfdb595810357d29e1ca96194c</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:36:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>cmdb_service_product_model</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-15 04:36:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>151953dfdb595810357d29e1ca96194a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cmdb_service_product_model</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_151953dfdb595810357d29e1ca96194a</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-15 04:36:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="Telecom" name="telecom">e4675bdbdb595810357d29e1ca961970</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

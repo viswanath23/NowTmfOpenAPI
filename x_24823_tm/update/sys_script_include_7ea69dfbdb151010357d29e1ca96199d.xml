@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_24823_tm.Ws_ErrorConstants</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>This Script Include Holds all the specific error codes apart from the standard.</description>
+        <name>Ws_ErrorConstants</name>
+        <script><![CDATA[var Ws_ErrorConstants = (function() {
+
+
+    /* Define the following syntax to define Error_code
+    ERROR_OBJECT_NAME:[<HTTP_STATUS_CODE>,<Message>,<Details>]
+    */
+    function MandtoryFieldsMissing(msg) {
+		var status = "400";
+		var message = "Mandatory fields validaiton failed";
+		var details = "The list of mandatory fields missing to insert a record are : "+msg;
+        return _generateErrorResponse(status,message ,details );
+    }
+
+    function NotFoundError() {
+        return _generateErrorResponse("400", "Mandatory fields validaiton failed", "The list of mandatory fields missing to insert a record are : ");
+    }
+
+    function InvalidInput() {
+        return _generateErrorResponse("400", "Mandatory fields validaiton failed", "The list of mandatory fields missing to insert a record are : ");
+    }
+
+
+    function _generateErrorResponse(status, message, details) {
+        var myError = new sn_ws_err.ServiceError();
+        myError.setStatus(status);
+        myError.setMessage(message);
+        myError.setDetail(details);
+        return myError;
+
+    }
+	
+    return {
+        'MandtoryFieldsMissing': MandtoryFieldsMissing,
+        'NotFoundError': NotFoundError,
+        'InvalidInput': InvalidInput
+    };
+
+})();]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-16 11:32:17</sys_created_on>
+        <sys_id>7ea69dfbdb151010357d29e1ca96199d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Ws_ErrorConstants</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_7ea69dfbdb151010357d29e1ca96199d</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-16 13:38:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

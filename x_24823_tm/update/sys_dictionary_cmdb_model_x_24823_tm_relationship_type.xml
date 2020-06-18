@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_24823_tm_inbound_ws_log">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="x_24823_tm_relationship_type" table="cmdb_model">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
-        <audit>true</audit>
+        <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>Relationship Type</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>x_24823_tm_relationship_type</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_24823_tm_inbound_ws_log</name>
+        <name>cmdb_model</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -47,21 +47,21 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>448</sizeclass>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
-        <sys_created_on>2020-05-25 10:56:55</sys_created_on>
-        <sys_id>24b6e438db411010357d29e1ca9619c6</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>x_24823_tm_inbound_ws_log</sys_name>
+        <sys_created_on>2020-06-17 08:20:26</sys_created_on>
+        <sys_id>b15f92c8dbad5010357d29e1ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Relationship Type</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
-        <sys_update_name>sys_dictionary_x_24823_tm_inbound_ws_log_null</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2020-06-16 10:21:40</sys_updated_on>
+        <sys_update_name>sys_dictionary_cmdb_model_x_24823_tm_relationship_type</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-17 08:20:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

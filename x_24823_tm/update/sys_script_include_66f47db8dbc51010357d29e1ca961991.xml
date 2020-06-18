@@ -12,8 +12,7 @@ TMF638_ServiceInventory.prototype = {
     initialize: function() {
         this.logUtils = new x_24823_tm.InboundWsLogUtils();
         this.logObj = "";
-        this.REST_RESOURCE_createService_id = "1e17c3dfdb701010357d29e1ca96199c";
-        this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+              this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
 
     },
     /***
@@ -24,9 +23,9 @@ TMF638_ServiceInventory.prototype = {
          * @return- responseObj
          *
          ***/
-    processCreateService: function(requestObj, responseObj) {
+    processCreateService: function(requestObj, responseObj,restResourceId) {
         try {
-            this.logObj = this.logUtils.createInbLog(requestObj, this.REST_RESOURCE_createService_id);
+            this.logObj = this.logUtils.createInbLog(requestObj, restResourceId);
 
             var requestBody = requestObj.body; // Returns instance of RESTAPIRequestBody
             var requestData = requestBody.data; //May be an array or a single object
@@ -187,13 +186,13 @@ TMF638_ServiceInventory.prototype = {
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:38:55</sys_created_on>
         <sys_id>66f47db8dbc51010357d29e1ca961991</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>TMF638_ServiceInventory</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_66f47db8dbc51010357d29e1ca961991</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-15 10:57:00</sys_updated_on>
+        <sys_updated_on>2020-06-16 13:03:04</sys_updated_on>
     </sys_script_include>
 </record_update>

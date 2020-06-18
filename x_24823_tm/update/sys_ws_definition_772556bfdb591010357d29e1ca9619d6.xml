@@ -4,10 +4,10 @@
         <base_uri>/api/x_24823_tm/tmf638_service_inventory</base_uri>
         <consumes>application/json,application/xml,text/xml</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_version>v2</default_version>
+        <default_version>No active default version</default_version>
         <doc_link/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
-        <is_versioned>true</is_versioned>
+        <is_versioned>false</is_versioned>
         <name>TMF638 Service Inventory Management</name>
         <namespace>x_24823_tm</namespace>
         <produces>application/json,application/xml,text/xml</produces>
@@ -15,16 +15,16 @@
         <service_id>tmf638_service_inventory</service_id>
         <short_description/>
         <sys_class_name>sys_ws_definition</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-05-21 06:27:13</sys_created_on>
-        <sys_id>d562071bdb701010357d29e1ca96197f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-16 12:57:31</sys_created_on>
+        <sys_id>772556bfdb591010357d29e1ca9619d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>TMF638 Service Inventory Management</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
-        <sys_update_name>sys_ws_definition_d562071bdb701010357d29e1ca96197f</sys_update_name>
+        <sys_update_name>sys_ws_definition_772556bfdb591010357d29e1ca9619d6</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-08 05:49:50</sys_updated_on>
+        <sys_updated_on>2020-06-16 12:57:31</sys_updated_on>
     </sys_ws_definition>
 </record_update>

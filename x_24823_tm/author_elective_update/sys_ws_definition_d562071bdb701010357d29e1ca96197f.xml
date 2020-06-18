@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/x_24823_tm/tmf638_service_inventory1</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>true</is_versioned>
+        <name>TMF638 Service Inventory Management</name>
+        <namespace>x_24823_tm</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>tmf638_service_inventory1</service_id>
+        <short_description>Service Inventory</short_description>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-21 06:27:13</sys_created_on>
+        <sys_id>d562071bdb701010357d29e1ca96197f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>TMF638 Service Inventory Management</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_ws_definition_d562071bdb701010357d29e1ca96197f</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-16 12:56:50</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</application>
+        <file_path/>
+        <instance_id>1af89848db38bb003050ac44d496195f</instance_id>
+        <instance_name>dev79735</instance_name>
+        <name>sys_ws_definition_d562071bdb701010357d29e1ca96197f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_24823_tm/tmf638_service_inventory1</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>true</is_versioned><name>TMF638 Service Inventory Management</name><namespace>x_24823_tm</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>tmf638_service_inventory1</service_id><short_description>Service Inventory</short_description><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-21 06:27:13</sys_created_on><sys_id>d562071bdb701010357d29e1ca96197f</sys_id><sys_mod_count>5</sys_mod_count><sys_name>TMF638 Service Inventory Management</sys_name><sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package><sys_policy>protected</sys_policy><sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope><sys_update_name>sys_ws_definition_d562071bdb701010357d29e1ca96197f</sys_update_name><sys_updated_by>viswanath23@gmail.com</sys_updated_by><sys_updated_on>2020-06-16 12:56:50</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>-1754881786</payload_hash>
+        <record_name>TMF638 Service Inventory Management</record_name>
+        <reverted_from/>
+        <source>a6b02cfcdb011010357d29e1ca9619b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-16 12:56:50</sys_created_on>
+        <sys_id>7b1556bfdb591010357d29e1ca9619cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>172bd3423cb0000001</sys_recorded_at>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-18 05:59:59</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>7f1556bfa559101085014e5fa06f60ce</update_guid>
+        <update_guid_history>7f1556bfa559101085014e5fa06f60ce:-1754881786,10b01ef752591010eba4d086ac3967e8:-1218259070,cba6eb89ea511010e55901def237a4c1:-1782290722,5685cf9f8270101082ee872bb6002f66:-841922085,c79207db5970101014cc7cbd4e470f56:1044473583</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-16 12:58:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>249654ec61a5497dadd558640a7a9a61</sys_id>
+        <sys_metadata>d562071bdb701010357d29e1ca96197f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TMF638 Service Inventory Management</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_parent/>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope_delete display_value="">531a72eddb4d4eea9fa4f90fe2196364</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_d562071bdb701010357d29e1ca96197f</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_d562071bdb701010357d29e1ca96197f">7b1556bfdb591010357d29e1ca9619cf</sys_update_version>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-16 12:58:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

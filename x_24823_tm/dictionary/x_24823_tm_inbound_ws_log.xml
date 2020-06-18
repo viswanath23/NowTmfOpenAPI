@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Inbound Requests" max_length="40" name="x_24823_tm_inbound_ws_log" sizeclass="29" type="collection">
+    <element audit="true" label="Inbound Requests" max_length="40" name="x_24823_tm_inbound_ws_log" sizeclass="448" type="collection">
         <element label="API Definition" max_length="32" name="api_definition" reference="sys_ws_definition" type="reference"/>
         <element label="Debug Notes" max_length="4000" name="debug_notes" type="journal"/>
         <element attributes="json_view=true" label="Request Body" max_length="1048576" name="request_body" type="string"/>

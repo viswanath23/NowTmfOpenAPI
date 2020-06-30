@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>05713a4fdb911810357d29e1ca9619bc</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_24823_tm_mapping_sheet">
+    <x_24823_tm_mapping_sheet action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_type>ServiceSpecification</base_type>
+        <configuration_data>{&#13;
+    "servicenowTable": "cmdb_service_product_model", &#13;
+"columnMapping":[&#13;
+    {&#13;
+        "pathname": "id",        &#13;
+        "servicenowColumn": "model_number",&#13;
+       "unique":"true"&#13;
+    },&#13;
+    {&#13;
+        "pathname": "name",        &#13;
+        "servicenowColumn": "name"&#13;
+    },&#13;
+    {&#13;
+        "pathname": "serviceType",        &#13;
+        "servicenowColumn": "type"&#13;
+    },&#13;
+    {&#13;
+        "pathname": "version",        &#13;
+        "servicenowColumn": "x_24823_tm_version"&#13;
+    },&#13;
+    {&#13;
+        "pathname": "bundle",        &#13;
+        "servicenowColumn": "bundle"&#13;
+    },&#13;
+    {&#13;
+        "pathname": "lifeCycleStatus",        &#13;
+        "servicenowColumn": "status"&#13;
+    }&#13;
+&#13;
+]&#13;
+}</configuration_data>
+        <number>MAP0001003</number>
+        <sys_class_name>x_24823_tm_mapping_sheet</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-14 07:05:50</sys_created_on>
+        <sys_id>05713a4fdb911810357d29e1ca9619bc</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-15 09:40:02</sys_updated_on>
+        <type>tosca.resourceTypes.InterDomainLink</type>
+    </x_24823_tm_mapping_sheet>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 03:15:06</sys_created_on>
+        <sys_id>3e361414dbbd1010357d29e1ca961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tosca.resourceTypes.InterDomainLink</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_metadata_link_3e361414dbbd1010357d29e1ca961990</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 03:15:06</sys_updated_on>
+        <tablename>x_24823_tm_mapping_sheet</tablename>
+    </sys_metadata_link>
+</record_update>

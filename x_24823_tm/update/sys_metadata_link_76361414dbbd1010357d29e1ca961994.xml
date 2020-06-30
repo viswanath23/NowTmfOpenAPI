@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>5d5fa8c3dbe5d010357d29e1ca9619d7</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_24823_tm_mapping_sheet">
+    <x_24823_tm_mapping_sheet action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_type>*</base_type>
+        <configuration_data>{&#13;
+    "servicenowTable": "x_24823_tm_product_offering",&#13;
+    "columnMapping": [&#13;
+        {&#13;
+            "pathname": "id",&#13;
+            "servicenowColumn": "model_number",&#13;
+            "type": "string",&#13;
+            "unique": "true"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "href",&#13;
+            "servicenowColumn": "x_24823_tm_href",&#13;
+            "type": "string"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "name",&#13;
+            "servicenowColumn": "name",&#13;
+            "type": "string"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "lifeCycleStatus",&#13;
+            "servicenowColumn": "status",&#13;
+            "type": "choice",&#13;
+            "choiceMapping": [&#13;
+                {&#13;
+                    "sourceValue": "",&#13;
+                    "targetValue": ""&#13;
+                },&#13;
+                {&#13;
+                    "sourceValue": "",&#13;
+                    "targetValue": ""&#13;
+                },&#13;
+                {&#13;
+                    "sourceValue": "",&#13;
+                    "targetValue": ""&#13;
+                },&#13;
+                {&#13;
+                    "sourceValue": "",&#13;
+                    "targetValue": ""&#13;
+                }&#13;
+            ]&#13;
+        },&#13;
+        {&#13;
+            "pathname": "version",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "isBundle",&#13;
+            "servicenowColumn": "bundle",&#13;
+            "type": "true/false"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "isSellable",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "validFor.startDateTime",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "validFor.endDateTime",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "lastUpdate",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "isSellable",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "place",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "serviceLevelAgreement",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "channel",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "serviceCandidate",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "category",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "resourceCandidate",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "productOfferingTerm",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "productOfferingPrice",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "attachment",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "marketSegment",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        {&#13;
+            "pathname": "prodSpecCharValueUse",&#13;
+            "servicenowColumn": "comments",&#13;
+            "type": "collection"&#13;
+        },&#13;
+        &#13;
+        {&#13;
+            "pathname": "productSpecification",&#13;
+            "referenceTable": "cmdb_model",&#13;
+            "type": "reference",&#13;
+            "referenceFieldMapping": [&#13;
+                {&#13;
+                    "pathname": "id",&#13;
+                    "servicenowColumn": "model_number",&#13;
+                    "type": "string",&#13;
+                    "unique": "true"&#13;
+                },&#13;
+                {&#13;
+                    "pathname": "href",&#13;
+                    "servicenowColumn": "href",&#13;
+                    "type": "string"&#13;
+                },&#13;
+                {&#13;
+                    "pathname": "name",&#13;
+                    "servicenowColumn": "name",&#13;
+                    "type": "string"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+        &#13;
+    ]&#13;
+}</configuration_data>
+        <number>MAP0001014</number>
+        <sys_class_name>x_24823_tm_mapping_sheet</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-26 07:52:21</sys_created_on>
+        <sys_id>5d5fa8c3dbe5d010357d29e1ca9619d7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-29 14:01:33</sys_updated_on>
+        <type>ProductOffering</type>
+    </x_24823_tm_mapping_sheet>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 03:15:06</sys_created_on>
+        <sys_id>76361414dbbd1010357d29e1ca961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ProductOffering</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_metadata_link_76361414dbbd1010357d29e1ca961994</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 03:15:06</sys_updated_on>
+        <tablename>x_24823_tm_mapping_sheet</tablename>
+    </sys_metadata_link>
+</record_update>

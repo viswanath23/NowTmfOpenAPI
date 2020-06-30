@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Product Offering</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Product Offering</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Model" name="Model">c39a444147622100158b949b6c9a71de</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-19 17:05:12</sys_created_on>
+        <sys_id>0fbaaef8dba95410357d29e1ca96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Product Offering</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_wizard_answer_0fbaaef8dba95410357d29e1ca96197b</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-19 17:05:12</sys_updated_on>
+        <table/>
+        <target_url>x_24823_tm_product_offering.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_24823_tm_spec_char" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Product</label>
+            <language>en</language>
+            <name>x_24823_tm_spec_char</name>
+            <sequence>10</sequence>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 11:11:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a733d8bedb619010357d29e1ca9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 11:11:27</sys_updated_on>
+            <value>product</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Service</label>
+            <language>en</language>
+            <name>x_24823_tm_spec_char</name>
+            <sequence>20</sequence>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 11:11:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c639cbedb619010357d29e1ca9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 11:11:46</sys_updated_on>
+            <value>service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Resource</label>
+            <language>en</language>
+            <name>x_24823_tm_spec_char</name>
+            <sequence>30</sequence>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 11:13:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dfb31c3adb619010357d29e1ca961917</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 11:13:19</sys_updated_on>
+            <value>resource</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <name>x_24823_tm_spec_char</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 11:11:27</sys_created_on>
+            <sys_id>4c53d4bedb619010357d29e1ca961958</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>category</sys_name>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_choice_x_24823_tm_spec_char_category</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 11:11:27</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

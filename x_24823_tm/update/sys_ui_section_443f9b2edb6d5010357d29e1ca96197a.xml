@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Assets" section_id="443f9b2edb6d5010357d29e1ca96197a" sys_domain="global" table="x_24823_tm_product_offering" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.cmdb_model.alm_asset.model</element>
+            <position>0</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 07:23:44</sys_created_on>
+            <sys_id>843f9b2edb6d5010357d29e1ca96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Assets" display_value="Assets" name="x_24823_tm_product_offering" sys_domain="global" view="Default view">443f9b2edb6d5010357d29e1ca96197a</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 07:23:44</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Assets</caption>
+            <header>false</header>
+            <name>x_24823_tm_product_offering</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 07:23:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>443f9b2edb6d5010357d29e1ca96197a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Assets</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_ui_section_443f9b2edb6d5010357d29e1ca96197a</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 07:23:44</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

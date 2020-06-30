@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Specification Char Relationship" max_length="40" name="x_24823_tm_spec_char_rel" sizeclass="0" type="collection"/>
+</database>

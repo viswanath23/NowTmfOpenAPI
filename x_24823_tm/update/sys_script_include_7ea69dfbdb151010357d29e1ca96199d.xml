@@ -2,30 +2,63 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_24823_tm.Ws_ErrorConstants</api_name>
+        <api_name>x_24823_tm.WsErrorUtils</api_name>
         <caller_access>1</caller_access>
         <client_callable>false</client_callable>
         <description>This Script Include Holds all the specific error codes apart from the standard.</description>
-        <name>Ws_ErrorConstants</name>
-        <script><![CDATA[var Ws_ErrorConstants = (function() {
+        <name>WsErrorUtils</name>
+        <script><![CDATA[var WsErrorUtils = (function() {
+
+    return {
+        'MandtoryFieldsMissing': MandtoryFieldsMissing,
+        'NotFoundError': NotFoundError,
+        'InvalidInput': InvalidInput,
+        "ServiceNotImplemented": ServiceNotImplemented,
+        "TechnicalError": TechnicalError,
+		"EventForbidden":EventForbidden
+    };
+	
+    function EventForbidden(msg) {
+        var status = "403";
+        var message = "Unable to process the event/notification received.";
+        var details = "The provided event cannot be processed under this REST resource endpoint. " + msg;
+        return _generateErrorResponse(status, message, details);
+    }
+
+    function TechnicalError(msg) {
+        var status = "500";
+        var message = "Servicenow technical Error";
+        var details = "An internal error occured while processing the request. Please raise a ticket with the HelpDesk team. The error details are :" + msg;
+        return _generateErrorResponse(status, message, details);
+    }
 
 
-    /* Define the following syntax to define Error_code
-    ERROR_OBJECT_NAME:[<HTTP_STATUS_CODE>,<Message>,<Details>]
-    */
+    function ServiceNotImplemented(msg) {
+        var status = "501";
+        var message = "API resource request processing is yet to be implemented";
+        var details = "The requested API is under maintainance and hence the request cannot be processed. " + msg;
+        return _generateErrorResponse(status, message, details);
+    }
+
     function MandtoryFieldsMissing(msg) {
-		var status = "400";
-		var message = "Mandatory fields validaiton failed";
-		var details = "The list of mandatory fields missing to insert a record are : "+msg;
-        return _generateErrorResponse(status,message ,details );
+        var status = "400";
+        var message = "Mandatory fields validaiton failed";
+        var details = "The list of mandatory fields missing to insert a record are : " + msg;
+        return _generateErrorResponse(status, message, details);
     }
 
-    function NotFoundError() {
-        return _generateErrorResponse("400", "Mandatory fields validaiton failed", "The list of mandatory fields missing to insert a record are : ");
+    function NotFoundError(msg) {
+        var status = "404";
+        var message = "Requested resource is not available";
+        var details = "The resource with the given id is not available in the current database. " + msg;
+        return _generateErrorResponse(status, message, details);
     }
 
-    function InvalidInput() {
-        return _generateErrorResponse("400", "Mandatory fields validaiton failed", "The list of mandatory fields missing to insert a record are : ");
+    function InvalidInput(msg) {
+        var status = "400";
+        var message = "Invalid Request Data";
+        var details = "There a technical/functional error due to invalid request data. The details are:  " + msg;
+        return _generateErrorResponse(status, message, details);
     }
 
 
@@ -37,25 +70,21 @@
         return myError;
 
     }
-	
-    return {
-        'MandtoryFieldsMissing': MandtoryFieldsMissing,
-        'NotFoundError': NotFoundError,
-        'InvalidInput': InvalidInput
-    };
+
+
 
 })();]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-06-16 11:32:17</sys_created_on>
         <sys_id>7ea69dfbdb151010357d29e1ca96199d</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Ws_ErrorConstants</sys_name>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>WsErrorUtils</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_7ea69dfbdb151010357d29e1ca96199d</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-16 13:38:46</sys_updated_on>
+        <sys_updated_on>2020-06-29 13:57:07</sys_updated_on>
     </sys_script_include>
 </record_update>

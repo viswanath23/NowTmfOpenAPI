@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_model" label="Product Offering" max_length="40" name="x_24823_tm_product_offering" sizeclass="0" type="collection"/>
+</database>

@@ -10,21 +10,105 @@
         <script><![CDATA[var TMF641_ServiceOrder = Class.create();
 TMF641_ServiceOrder.prototype = {
     initialize: function() {
+        this.logUtils = new x_24823_tm.InboundWsLogUtils();
+        this.logObj = "";
+        this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+    },
+	  /***
+	 * processCreateServiceOrder -  Will process inbound Resource request for Create Resource Specification 
+         * @param: (M) requestObj - request object as created in inbound scripted API
+         * @param: (M) responseObj - request object as created in inbound scripted API
+    	
+         * @return- responseObj
+         *
+         ***/
+    processCreateServiceOrder: function(requestObj, responseObj, restResourceId) {
+        try {
+            this.logObj = this.logUtils.createInbLog(requestObj, restResourceId);
+
+            var requestBody = requestObj.body; // Returns instance of RESTAPIRequestBody
+            var requestData = requestBody.data; //May be an array or a single object
+
+            // this.mandatoryValidationCheck(requestBody);
+            //   this.executeCreateServiceOrder(requestBody);
+            this.buildCreateServiceOrderResponse(responseObj);
+            return responseObj;
+
+        } catch (err) {
+            gs.error("TMF641_ServiceOrder::processCreateServiceOrder >> Error occured " + err.toString());
+        }
     },
 
+
+    mandatoryValidationCheck: function() {
+        try {
+
+        } catch (err) {
+            gs.error("TMF641_ServiceOrder::mandatoryValidationCheck >> Error Occured " + err.toString());
+        }
+    },
+
+    executeCreateServiceOrder: function(requestData) {
+        try {
+            var prefix = "$.";
+            if (!requestData) {
+                throw "RequestBody Data is mandatory";
+            }
+
+            if (requestData instanceof Object) {
+                /* Query the mapping matrix table to fetch the corresponding configuration for the given basetype & type. 
+                 */
+                var grMappingConfig = new GlideRecord("x_24823_tm_mapping_sheet");
+                grMappingConfig.addQuery("base_type", (requestData["@baseType"]) ? requestData["@baseType"] : "");
+                grMappingConfig.addQuery("type", (requestData["@type"]) ? requestData["@type"] : "");
+                grMappingConfig.addQuery("active", "true");
+                grMappingConfig.query();
+
+                if (grMappingConfig.next()) {
+                    var configObj = JSON.parse(grMappingConfig.configuration_data);
+                    var colMapping = configObj.columnMapping;
+
+                    var grTargetRecord = new GlideRecord(configObj.servicenowTable + "");
+                    grTargetRecord.initialize();
+                    for (var i in colMapping) {
+                        grTargetRecord.setValue(colMapping[i].servicenowColumn + "", x_24823_tm.jsonPath(requestData, prefix + colMapping[i].pathname).toString());
+                    }
+                    grTargetRecord.insert();
+                } else {
+                    throw "Active mapping configuration record not found with the BaseType {0}, Type {1}", [requestData["@baseType"], requestData["@type"]];
+                }
+
+            }
+        } catch (err) {
+            gs.error("TMF641_ServiceOrder::executeCreateServiceOrder >> Error Occured " + err.toString());
+        }
+    },
+
+    buildCreateServiceOrderResponse: function(responseObj) {
+        try {
+
+            var body = {};
+            body.message = "Service Order is created successfully";
+            this.logUtils.updateInbLog(this.logObj, JSON.stringify(body), "2", this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setStatus(this.SUCCESSFULLY_CREATED_HTTP_CODE);
+            responseObj.setBody(body);
+        } catch (err) {
+            gs.error("TMF641_ServiceOrder::buildCreateServiceOrderResponse >> Error Occured " + err.toString());
+        }
+    },
     type: 'TMF641_ServiceOrder'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-26 06:26:38</sys_created_on>
         <sys_id>c7627841db855010357d29e1ca961948</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>TMF641_ServiceOrder</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_c7627841db855010357d29e1ca961948</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-05-26 06:26:38</sys_updated_on>
+        <sys_updated_on>2020-06-18 10:47:39</sys_updated_on>
     </sys_script_include>
 </record_update>

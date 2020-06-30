@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Specification Characteristic" max_length="40" name="x_24823_tm_spec_char" sizeclass="0" type="collection">
+        <element label="@Base Type" max_length="100" name="base_type" type="string"/>
+        <element choice="1" label="Category" mandatory="true" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Product" sequence="10" value="product"/>
+                <element inactive_on_update="false" label="Service" sequence="20" value="service"/>
+                <element inactive_on_update="false" label="Resource" sequence="30" value="resource"/>
+            </choice>
+        </element>
+        <element label="Configurable" max_length="40" name="configurable" type="boolean"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element label="Extensibile" max_length="40" name="extensibile" type="boolean"/>
+        <element label="Max Cardinality" max_length="40" name="max_cardinality" type="integer"/>
+        <element label="Min Cardinality" max_length="40" name="min_cardinality" type="integer"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Regex" max_length="100" name="regex" type="string"/>
+        <element label="@Schema Location" max_length="500" name="schema_location" type="url"/>
+        <element label="@Type" max_length="200" name="type" type="string"/>
+        <element label="Valid For" max_length="100" name="valid_for" type="glide_date_time"/>
+        <element label="Value Type" max_length="100" name="value_type" type="string"/>
+    </element>
+</database>

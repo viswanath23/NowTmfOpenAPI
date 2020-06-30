@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="type" label="@Type" language="en" table="x_24823_tm_spec_char">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <help/>
+            <hint/>
+            <label>@Type</label>
+            <language>en</language>
+            <name>x_24823_tm_spec_char</name>
+            <plural>@Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 11:28:18</sys_created_on>
+            <sys_id>6227d8f2dba19010357d29e1ca9619a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>@Type</sys_name>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_x_24823_tm_spec_char_type_en</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 11:28:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

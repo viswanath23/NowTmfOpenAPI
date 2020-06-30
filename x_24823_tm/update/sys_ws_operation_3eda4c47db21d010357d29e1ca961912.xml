@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_24823_tm/tmf633_service_catalog/serviceCatalogEvents</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Push Service Catalog Events</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_24823_tm/v1/tmf633_service_catalog/serviceCatalogEvents</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/serviceCatalogEvents</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-26 05:12:59</sys_created_on>
+        <sys_id>3eda4c47db21d010357d29e1ca961912</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Push Service Catalog Events</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_ws_operation_3eda4c47db21d010357d29e1ca961912</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-26 05:25:51</sys_updated_on>
+        <web_service_definition display_value="TMF633 Service Catalog Management">bd23835bdb701010357d29e1ca9619b1</web_service_definition>
+        <web_service_version display_value="v1">163d5f42db95d010357d29e1ca961917</web_service_version>
+    </sys_ws_operation>
+</record_update>

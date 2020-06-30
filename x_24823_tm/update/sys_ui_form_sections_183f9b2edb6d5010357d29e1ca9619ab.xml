@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="183f9b2edb6d5010357d29e1ca9619ab" sys_domain="global" table="x_24823_tm_product_offering" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 07:23:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d43f9b2edb6d5010357d29e1ca9619b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_24823_tm_product_offering" name="x_24823_tm_product_offering" sys_domain="global" view="1042ddc0c4d133007850fc0eb61b29a7">183f9b2edb6d5010357d29e1ca9619ab</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_product_offering" sys_domain="global" view="1042ddc0c4d133007850fc0eb61b29a7">583f9b2edb6d5010357d29e1ca9619ad</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 07:23:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 07:23:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>543f9b2edb6d5010357d29e1ca9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_24823_tm_product_offering" name="x_24823_tm_product_offering" sys_domain="global" view="1042ddc0c4d133007850fc0eb61b29a7">183f9b2edb6d5010357d29e1ca9619ab</sys_ui_form>
+            <sys_ui_section caption="General" display_value="General" name="x_24823_tm_product_offering" sys_domain="global" view="1042ddc0c4d133007850fc0eb61b29a7">d83f9b2edb6d5010357d29e1ca9619b1</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 07:23:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_24823_tm_product_offering</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-25 07:23:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>183f9b2edb6d5010357d29e1ca9619ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_24823_tm_product_offering</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_183f9b2edb6d5010357d29e1ca9619ab</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-25 07:23:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace" name="workspace">1042ddc0c4d133007850fc0eb61b29a7</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

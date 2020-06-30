@@ -9,7 +9,11 @@
         <name>TMF620_ProductCatalog</name>
         <script><![CDATA[var TMF620_ProductCatalog = Class.create();
 TMF620_ProductCatalog.prototype = {
-    initialize: function() {},
+    initialize: function() {
+		   this.logUtils = new x_24823_tm.InboundWsLogUtils();
+        this.logObj = "";
+              this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+	},
     /***
 	 * processCreateProductOffering -  Will process inbound Resource request for Create Product offering
          * @param: (M) requestObj - request object as created in inbound scripted API
@@ -18,11 +22,12 @@ TMF620_ProductCatalog.prototype = {
          * @return- responseObj
          *
          ***/
-    processCreateProductOffering: function(requestObj, responseObj) {
+    processCreateProductOffering: function(requestObj, responseObj,restResourceId) {
         try {
-            var requestBody = request.getBody();
-            this.mandatoryValidationCheck(requestBody);
-            this.executeCreateProductOffering(requestBody);
+			  this.logObj = this.logUtils.createInbLog(requestObj, restResourceId);
+           // var requestBody = requestObj.getBody();
+          //  this.mandatoryValidationCheck(requestBody);
+          //  this.executeCreateProductOffering(requestBody);
             this.buildCreateProductOfferingResponse(responseObj);
 			return responseObj;
 
@@ -174,10 +179,10 @@ TMF620_ProductCatalog.prototype = {
 		}
 	},
 	
-	buildCreateProductOfferingResponse: function(responseBody){
+	buildCreateProductOfferingResponse: function(responseObj){
 		try{
 			var body = {};
-            body.message = "Product Spec is created successfully";
+            body.message = "Product Offering is created successfully";
             responseObj.setStatus("201");
             responseObj.setBody(body);
 			
@@ -256,13 +261,13 @@ TMF620_ProductCatalog.prototype = {
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-26 06:25:36</sys_created_on>
         <sys_id>8c323c01db855010357d29e1ca96195c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>TMF620_ProductCatalog</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_8c323c01db855010357d29e1ca96195c</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-18 04:52:38</sys_updated_on>
+        <sys_updated_on>2020-06-18 12:01:52</sys_updated_on>
     </sys_script_include>
 </record_update>

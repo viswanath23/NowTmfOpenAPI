@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Specification Characteristic Value" max_length="40" name="x_24823_tm_spec_char_value" sizeclass="0" type="collection">
+        <element label="@Base Type" max_length="100" name="base_type" type="string"/>
+        <element choice="1" label="Category" max_length="100" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Product" sequence="10" value="product"/>
+                <element inactive_on_update="false" label="Service" sequence="20" value="service"/>
+                <element inactive_on_update="false" label="Resource" sequence="30" value="resource"/>
+            </choice>
+        </element>
+        <element label="Is Default" max_length="40" name="is_default" type="boolean"/>
+        <element label="Range Interval" max_length="100" name="range_interval" type="string"/>
+        <element label="Regular Expression" max_length="200" name="regex" type="string"/>
+        <element label="@Schema Location" max_length="1000" name="schema_location" type="url"/>
+        <element label="Specification Characteristic" mandatory="true" max_length="32" name="spec_char" reference="x_24823_tm_spec_char" type="reference"/>
+        <element label="@Type" max_length="500" name="type" type="string"/>
+        <element label="Unit of Measure" max_length="100" name="unit_of_measure" type="string"/>
+        <element label="Valid For" max_length="40" name="valid_for" type="glide_date_time"/>
+        <element label="Value" max_length="800" name="value" type="data_structure"/>
+        <element label="Value From" max_length="40" name="value_from" type="integer"/>
+        <element label="Value To" max_length="40" name="value_to" type="integer"/>
+        <element label="Value Type" max_length="100" name="value_type" type="string"/>
+        <index name="index">
+            <element name="spec_char"/>
+        </index>
+    </element>
+</database>

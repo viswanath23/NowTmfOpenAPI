@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-25 11:09:38</sys_created_on>
+        <sys_id>11e290bedb619010357d29e1ca961922</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_24823_tm_spec_char.model_manager</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_security_acl display_value="x_24823_tm_spec_char">c9e290bedb619010357d29e1ca96191b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_11e290bedb619010357d29e1ca961922</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-25 12:17:09</sys_updated_on>
+        <sys_user_role display_value="model_manager" name="model_manager">f0fc76431b302000aebbfbcd2c071346</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

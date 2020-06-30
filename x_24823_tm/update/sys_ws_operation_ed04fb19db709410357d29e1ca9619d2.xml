@@ -11,6 +11,7 @@
 
     // implement resource here
 
+	new x_24823_tm.TMF620_ProductCatalog().processCreateProductOffering(request,response,"ed04fb19db709410357d29e1ca9619d2" /* Current Scripted REST resource sys_id */);
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_24823_tm/tmf620_product_catalog/productOffering</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
@@ -25,14 +26,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-05-15 04:56:34</sys_created_on>
         <sys_id>ed04fb19db709410357d29e1ca9619d2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Create Product Offering</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
-        <sys_policy/>
+        <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_ws_operation_ed04fb19db709410357d29e1ca9619d2</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-14 05:57:06</sys_updated_on>
+        <sys_updated_on>2020-06-18 11:35:40</sys_updated_on>
         <web_service_definition display_value="TMF620 Product Catalog Management">3e733359db709410357d29e1ca961989</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

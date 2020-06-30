@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Product Model" max_length="40" name="cmdb_model" sizeclass="472" type="collection">
+    <element label="Product Model" max_length="40" name="cmdb_model" sizeclass="477" type="collection">
+        <element label="href" max_length="500" name="x_24823_tm_href" type="url"/>
         <element label="Relationship Type" max_length="40" name="x_24823_tm_relationship_type" type="string"/>
     </element>
 </database>

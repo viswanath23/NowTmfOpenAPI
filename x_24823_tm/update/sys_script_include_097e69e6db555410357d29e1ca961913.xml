@@ -10,9 +10,70 @@
         <script><![CDATA[var WsCommonUtils = (function() {
 
     return {
-        'responseBuilder': responseBuilder,
-        "isNotificationRequest": isNotificationRequest
+        "recordInserted": recordInserted,
+        "recordUpdated": recordUpdated,
+        "recordDeleted": recordDeleted,
+        "isValidEvent": isValidEvent
+
     };
+
+    function recordInserted(logobj, responseObj, args) {
+        try {
+            var headers = "";
+            var contentType = "";
+            var location = "";
+            var status = "201";
+            var body = {};
+            body.message = args.resource + " is successfully created";
+
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, JSON.stringify(body), "2", "201");
+            return responseBuilder(responseObj, status, body, headers, contentType, location);
+        } catch (err) {
+            gs.error("WsCommonUtils::recordInserted >> Error occured \n " + err.toString());
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, "Servicenow technical Error", "3", "500");
+            return WsErrorUtils.TechnicalError(err.toString());
+        }
+    }
+
+    function recordUpdated(logobj, responseObj, args) {
+        try {
+
+            var headers = "";
+            var contentType = "";
+            var location = "";
+            var status = "200";
+            var body = {};
+            body.message = args.resource + " is successfully updated";
+
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, JSON.stringify(body), "2", "201");
+            return responseBuilder(responseObj, status, body, headers, contentType, location);
+        } catch (err) {
+            gs.error("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, "Servicenow technical Error", "3", "500");
+            return WsErrorUtils.TechnicalError(err.toString());
+        }
+
+    }
+
+    function recordDeleted(logobj, responseObj, args) {
+        try {
+
+            var headers = "";
+            var contentType = "";
+            var location = "";
+            var status = "201";
+            var body = {};
+            body.message = args.resource + " is successfully deleted";
+
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, JSON.stringify(body), "2", "201");
+            return responseBuilder(responseObj, status, body, headers, contentType, location);
+        } catch (err) {
+            gs.error("WsCommonUtils::recordDeleted >> Error occured \n " + err.toString());
+            new x_24823_tm.InboundWsLogUtils().updateInbLog(logObj, "Servicenow technical Error", "3", "500");
+            return WsErrorUtils.TechnicalError(err.toString());
+        }
+
+    }
 
     function responseBuilder(responseObj, status, responseBody, headers, contentType, location) {
         try {
@@ -23,73 +84,36 @@
                 responseObj.setHeaders(headers);
             }
             if (!gs.nil(location)) {
-                responseObj.setLocation();
+                responseObj.setLocation(location);
             }
             if (!gs.nil(contentType)) {
-                responseObj.setContentType();
+                responseObj.setContentType(contentType);
             }
-			return responseObj;
+            return responseObj;
 
         } catch (err) {
-            gs.addErrorMessage("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
-            WsErrorUtils.TechnicalError(err.toString());
+            gs.error("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
+            return WsErrorUtils.TechnicalError(err.toString());
         }
     }
-    /***	 * isNotificationRequest -  will validate the input request is of Notification or not by checking the 'eventid' parameter in the requestbody
-            * @param: (M) requestBody - request object as created in inbound scripted API
-            * @param: (M) responseObj - request object as created in inbound scripted API
-       	
-            * @return- responseObj
-            *
-            ***/
 
-    function isNotificationRequest(requestBody) {
+    function isValidEvent(eventname, resourceendpoint) { // resourceendpoint is sys_id
         try {
-            /* Validation to accept only String/Object to verify it is a Notifiaton request or not */
-            if ((typeof requestBody) !== 'string' && (typeof requestBody) === 'object') {
-                throw "The input requestbody to function 'isNotificationRequest' should be either Object/String ";
-            }
+            var ev = new GlideRecord('x_24823_tm_tmf_event');
+            ev.addQuery('tmf_event_name', eventname);
+            ev.addQuery('resource_api_endpoints', 'contains', resourceendpoint);
+			ev.setLimit(1);
+            ev.query();           
 
-            if ((typeof requestBody) === 'string') {
-                requestBody = JSON.parse(requestBody); // converting into JSON object if the passed object is String
-            }
-            return !gs.nil(requestBody['eventId']);
+            return ev.hasNext();
 
         } catch (err) {
-            gs.addErrorMessage("WsCommonUtils::isNotificationRequest >> Error occured \n " + err.toString());
-            WsErrorUtils.TechnicalError(err.toString());
+            gs.error("WsCommonUtils::EventValidation >> Error Occured \n " + err.toString());
+			return WsErrorUtils.TechnicalError(err.toString());
         }
     }
 
 
-    function f1(requestObj) {
-        try {
-
-        } catch (err) {
-            gs.addErrorMessage("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
-            WsErrorUtils.TechnicalError(err.toString());
-        }
-    }
-
-
-    function f2(requestObj) {
-        try {
-
-        } catch (err) {
-            gs.addErrorMessage("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
-            WsErrorUtils.TechnicalError(err.toString());
-        }
-    }
-
-
-    function f3(requestObj) {
-        try {
-
-        } catch (err) {
-            gs.addErrorMessage("WsCommonUtils::responseBuilder >> Error occured \n " + err.toString());
-            WsErrorUtils.TechnicalError(err.toString());
-        }
-    }
 
 
 
@@ -99,13 +123,13 @@
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-06-12 12:56:20</sys_created_on>
         <sys_id>097e69e6db555410357d29e1ca961913</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>WsCommonUtils</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_097e69e6db555410357d29e1ca961913</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-19 15:01:56</sys_updated_on>
+        <sys_updated_on>2020-07-06 17:38:34</sys_updated_on>
     </sys_script_include>
 </record_update>

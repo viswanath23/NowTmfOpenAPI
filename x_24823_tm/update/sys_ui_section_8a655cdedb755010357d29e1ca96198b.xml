@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="8a655cdedb755010357d29e1ca96198b" sys_domain="global" table="x_24823_tm_spec_char_value" version="3" view="telecom">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8a08785edb395010357d29e1ca96198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>is_default</element>
+            <position>1</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0e08785edb395010357d29e1ca96198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value</element>
+            <position>2</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8e08785edb395010357d29e1ca96198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_type</element>
+            <position>3</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0208785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>default_value</element>
+            <position>4</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8208785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_from</element>
+            <position>5</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0608785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_to</element>
+            <position>6</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8608785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valid_for</element>
+            <position>7</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0a08785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>range_interval</element>
+            <position>8</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8a08785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>9</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0e08785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>spec_char</element>
+            <position>10</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8e08785edb395010357d29e1ca96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <position>11</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0208785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_type</element>
+            <position>12</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8208785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <position>13</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0608785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>schema_location</element>
+            <position>14</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8608785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>regex</element>
+            <position>15</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0a08785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_of_measure</element>
+            <position>16</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>8a08785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>17</position>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 10:50:37</sys_created_on>
+            <sys_id>0e08785edb395010357d29e1ca96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_24823_tm_spec_char_value" sys_domain="global" view="e4675bdbdb595810357d29e1ca961970">8a655cdedb755010357d29e1ca96198b</sys_ui_section>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 10:50:37</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_24823_tm_spec_char_value</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 08:19:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a655cdedb755010357d29e1ca96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_24823_tm_spec_char_value</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_ui_section_8a655cdedb755010357d29e1ca96198b</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 08:19:21</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Telecom" name="telecom">e4675bdbdb595810357d29e1ca961970</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

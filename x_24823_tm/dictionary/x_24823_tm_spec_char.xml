@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Specification Characteristic" max_length="40" name="x_24823_tm_spec_char" sizeclass="0" type="collection">
+    <element label="Specification Characteristic" max_length="40" name="x_24823_tm_spec_char" sizeclass="14" type="collection">
+        <element label="Associated To" max_length="32" name="associated_to" reference="cmdb_model" type="reference"/>
         <element label="@Base Type" max_length="100" name="base_type" type="string"/>
         <element choice="1" label="Category" mandatory="true" max_length="40" name="category" type="choice">
             <choice>
@@ -9,8 +10,10 @@
             </choice>
         </element>
         <element label="Configurable" max_length="40" name="configurable" type="boolean"/>
-        <element label="Description" max_length="500" name="description" type="string"/>
+        <element label="Description" max_length="500" name="description" type="html"/>
+        <element attributes="edge_encryption_enabled=true" label="Display Value" max_length="100" name="display_value" type="string"/>
         <element label="Extensibile" max_length="40" name="extensibile" type="boolean"/>
+        <element label="Is Unique" max_length="40" name="is_unique" type="boolean"/>
         <element label="Max Cardinality" max_length="40" name="max_cardinality" type="integer"/>
         <element label="Min Cardinality" max_length="40" name="min_cardinality" type="integer"/>
         <element label="Name" max_length="100" name="name" type="string"/>
@@ -19,5 +22,8 @@
         <element label="@Type" max_length="200" name="type" type="string"/>
         <element label="Valid For" max_length="100" name="valid_for" type="glide_date_time"/>
         <element label="Value Type" max_length="100" name="value_type" type="string"/>
+        <index name="index">
+            <element name="associated_to"/>
+        </index>
     </element>
 </database>

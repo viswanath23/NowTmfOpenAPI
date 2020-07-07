@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_parameter_set">
+    <sys_atf_parameter_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Event Request Payload = {&#13;
+    "eventId": "00001",&#13;
+    "eventType": "ProductOfferingCreateEvent",&#13;
+    "eventTime": "2020-05-14",&#13;
+    "event": {&#13;
+        "productOffering": {&#13;
+            "id": "7655",&#13;
+            "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOffering/7655",&#13;
+            "name": "Basic Firewall for Business",&#13;
+            "description": "This product offering suggests a firewall service that can be deployed in business customer premise.",&#13;
+            "version": "2.1",&#13;
+            "validFor": {&#13;
+                "startDateTime": "2017-08-23T00:00",&#13;
+                "endDateTime": "2018-03-25T00:00"&#13;
+            },&#13;
+            "lastUpdate": "2017-08-27T00:00",&#13;
+            "lifecycleStatus": "Active",&#13;
+            "isBundle": false,&#13;
+            "isSellable": true,&#13;
+            "statusReason": "Released for sale",&#13;
+            "place": [&#13;
+                {&#13;
+                    "id": "9979",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979",&#13;
+                    "name": "San Francisco Bay Area",&#13;
+                    "@referredType": "GeographicAddress"&#13;
+                }&#13;
+            ],&#13;
+            "serviceLevelAgreement": {&#13;
+                "id": "8082",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/slaManagement/v4/sla/8082",&#13;
+                "name": "Gold SLA for Business",&#13;
+                "@referredType": "BusinessSLA"&#13;
+            },&#13;
+            "productSpecification": {&#13;
+                "id": "9881",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",&#13;
+                "version": "1.1",&#13;
+                "name": "Robotics999",&#13;
+                "@referredType": "DeviceSpecification"&#13;
+            },&#13;
+            "channel": [&#13;
+                {&#13;
+                    "id": "4406",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/salesChannelManagement/v4/channel/4406",&#13;
+                    "name": "Online Channel"&#13;
+                }&#13;
+            ],&#13;
+            "serviceCandidate": {&#13;
+                "id": "8167",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/8167",&#13;
+                "version": "1.1",&#13;
+                "name": "Mega Max"&#13;
+            },&#13;
+            "category": [&#13;
+                {&#13;
+                    "id": "2646",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/category/2646",&#13;
+                    "version": "2.1",&#13;
+                    "name": "Cloud"&#13;
+                }&#13;
+            ],&#13;
+            "resourceCandidate": {&#13;
+                "id": "8937",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceCandidate/8937",&#13;
+                "name": "Mega Band"&#13;
+            },&#13;
+            "productOfferingTerm": [&#13;
+                {&#13;
+                    "name": "New Client Condition",&#13;
+                    "description": "This product offering term is for new client at fix duration of less than a year",&#13;
+                    "duration": {&#13;
+                        "amount": 3,&#13;
+                        "units": "Month"&#13;
+                    },&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-06-15T00:00",&#13;
+                        "endDateTime": "2018-01-13T00:00"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "productOfferingPrice": [&#13;
+                {&#13;
+                    "id": "1747",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1747",&#13;
+                    "name": "Recurring Monthly Price for Business Firewall"&#13;
+                }&#13;
+            ],&#13;
+            "attachment": [&#13;
+                {&#13;
+                    "description": "This attachment gives a block diagram of the firewall.",&#13;
+                    "mimeType": "image/jpeg",&#13;
+                    "url": "https://mycsp.com:7070/docloader?docnum=3534536"&#13;
+                }&#13;
+            ],&#13;
+            "marketSegment": [&#13;
+                {&#13;
+                    "id": "1266",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentRef/1266",&#13;
+                    "name": "North Region"&#13;
+                }&#13;
+            ],&#13;
+            "prodSpecCharValueUse": [&#13;
+                {&#13;
+                    "name": "Number of Ports",&#13;
+                    "description": "The total Number of Ports for this product",&#13;
+                    "valueType": "number",&#13;
+                    "minCardinality": 1,&#13;
+                    "maxCardinality": 1,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-06-17T00:00",&#13;
+                        "endDateTime": "2018-01-13T00:00"&#13;
+                    },&#13;
+                    "productSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "isDefault": true,&#13;
+                            "valueType": "number",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-06-16T00:00",&#13;
+                                "endDateTime": "2018-01-13T00:00"&#13;
+                            },&#13;
+                            "value": 8&#13;
+                        },&#13;
+                        {&#13;
+                            "isDefault": false,&#13;
+                            "valueType": "number",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-06-16T00:00",&#13;
+                                "endDateTime": "2018-01-13T00:00"&#13;
+                            },&#13;
+                            "value": 16&#13;
+                        }&#13;
+                    ],&#13;
+                    "productSpecification": {&#13;
+                        "id": "9881",&#13;
+                        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",&#13;
+                        "version": "1.1"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "@type": "ProductOffering"&#13;
+        }&#13;
+    }&#13;
+}</description>
+        <order>1</order>
+        <parameters/>
+        <sys_class_name>sys_atf_parameter_set</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 04:26:09</sys_created_on>
+        <sys_id>9d84a45cdbfd1010357d29e1ca96194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_atf_parameter_set_9d84a45cdbfd1010357d29e1ca96194e</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 04:26:09</sys_updated_on>
+        <test display_value="TMF620_ProductOffering_InboundEvent_processing">7183201cdbfd1010357d29e1ca961977</test>
+    </sys_atf_parameter_set>
+    <sys_variable_value action="delete_multiple" query="document_key=9d84a45cdbfd1010357d29e1ca96194e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_parameter_set</document>
+        <document_key>9d84a45cdbfd1010357d29e1ca96194e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 04:26:09</sys_created_on>
+        <sys_id>ef76681cdbfd1010357d29e1ca961901</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 04:26:09</sys_updated_on>
+        <value>{&#13;
+    "eventId": "00001",&#13;
+    "eventType": "ProductOfferingCreateEvent",&#13;
+    "eventTime": "2020-05-14",&#13;
+    "event": {&#13;
+        "productOffering": {&#13;
+            "id": "7655",&#13;
+            "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOffering/7655",&#13;
+            "name": "Basic Firewall for Business",&#13;
+            "description": "This product offering suggests a firewall service that can be deployed in business customer premise.",&#13;
+            "version": "2.1",&#13;
+            "validFor": {&#13;
+                "startDateTime": "2017-08-23T00:00",&#13;
+                "endDateTime": "2018-03-25T00:00"&#13;
+            },&#13;
+            "lastUpdate": "2017-08-27T00:00",&#13;
+            "lifecycleStatus": "Active",&#13;
+            "isBundle": false,&#13;
+            "isSellable": true,&#13;
+            "statusReason": "Released for sale",&#13;
+            "place": [&#13;
+                {&#13;
+                    "id": "9979",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979",&#13;
+                    "name": "San Francisco Bay Area",&#13;
+                    "@referredType": "GeographicAddress"&#13;
+                }&#13;
+            ],&#13;
+            "serviceLevelAgreement": {&#13;
+                "id": "8082",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/slaManagement/v4/sla/8082",&#13;
+                "name": "Gold SLA for Business",&#13;
+                "@referredType": "BusinessSLA"&#13;
+            },&#13;
+            "productSpecification": {&#13;
+                "id": "9881",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",&#13;
+                "version": "1.1",&#13;
+                "name": "Robotics999",&#13;
+                "@referredType": "DeviceSpecification"&#13;
+            },&#13;
+            "channel": [&#13;
+                {&#13;
+                    "id": "4406",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/salesChannelManagement/v4/channel/4406",&#13;
+                    "name": "Online Channel"&#13;
+                }&#13;
+            ],&#13;
+            "serviceCandidate": {&#13;
+                "id": "8167",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/8167",&#13;
+                "version": "1.1",&#13;
+                "name": "Mega Max"&#13;
+            },&#13;
+            "category": [&#13;
+                {&#13;
+                    "id": "2646",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/category/2646",&#13;
+                    "version": "2.1",&#13;
+                    "name": "Cloud"&#13;
+                }&#13;
+            ],&#13;
+            "resourceCandidate": {&#13;
+                "id": "8937",&#13;
+                "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceCandidate/8937",&#13;
+                "name": "Mega Band"&#13;
+            },&#13;
+            "productOfferingTerm": [&#13;
+                {&#13;
+                    "name": "New Client Condition",&#13;
+                    "description": "This product offering term is for new client at fix duration of less than a year",&#13;
+                    "duration": {&#13;
+                        "amount": 3,&#13;
+                        "units": "Month"&#13;
+                    },&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-06-15T00:00",&#13;
+                        "endDateTime": "2018-01-13T00:00"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "productOfferingPrice": [&#13;
+                {&#13;
+                    "id": "1747",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1747",&#13;
+                    "name": "Recurring Monthly Price for Business Firewall"&#13;
+                }&#13;
+            ],&#13;
+            "attachment": [&#13;
+                {&#13;
+                    "description": "This attachment gives a block diagram of the firewall.",&#13;
+                    "mimeType": "image/jpeg",&#13;
+                    "url": "https://mycsp.com:7070/docloader?docnum=3534536"&#13;
+                }&#13;
+            ],&#13;
+            "marketSegment": [&#13;
+                {&#13;
+                    "id": "1266",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentRef/1266",&#13;
+                    "name": "North Region"&#13;
+                }&#13;
+            ],&#13;
+            "prodSpecCharValueUse": [&#13;
+                {&#13;
+                    "name": "Number of Ports",&#13;
+                    "description": "The total Number of Ports for this product",&#13;
+                    "valueType": "number",&#13;
+                    "minCardinality": 1,&#13;
+                    "maxCardinality": 1,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-06-17T00:00",&#13;
+                        "endDateTime": "2018-01-13T00:00"&#13;
+                    },&#13;
+                    "productSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "isDefault": true,&#13;
+                            "valueType": "number",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-06-16T00:00",&#13;
+                                "endDateTime": "2018-01-13T00:00"&#13;
+                            },&#13;
+                            "value": 8&#13;
+                        },&#13;
+                        {&#13;
+                            "isDefault": false,&#13;
+                            "valueType": "number",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-06-16T00:00",&#13;
+                                "endDateTime": "2018-01-13T00:00"&#13;
+                            },&#13;
+                            "value": 16&#13;
+                        }&#13;
+                    ],&#13;
+                    "productSpecification": {&#13;
+                        "id": "9881",&#13;
+                        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",&#13;
+                        "version": "1.1"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "@type": "ProductOffering"&#13;
+        }&#13;
+    }&#13;
+}</value>
+        <variable display_value="">3204e81cdbfd1010357d29e1ca961930</variable>
+    </sys_variable_value>
+</record_update>

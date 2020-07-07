@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_24823_tm_at_type" label="@Type" language="en" table="cmdb_model">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_24823_tm_at_type</element>
+            <help/>
+            <hint/>
+            <label>@Type</label>
+            <language>en</language>
+            <name>cmdb_model</name>
+            <plural>@Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-07-06 07:53:22</sys_created_on>
+            <sys_id>617f40d6db755010357d29e1ca96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>@Type</sys_name>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_cmdb_model_x_24823_tm_at_type_en</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-07-06 07:53:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

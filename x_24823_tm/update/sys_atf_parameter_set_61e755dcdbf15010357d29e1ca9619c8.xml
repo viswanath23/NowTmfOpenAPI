@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_parameter_set">
+    <sys_atf_parameter_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="1">9d84a45cdbfd1010357d29e1ca96194e</copied_from>
+        <description>Event Request Payload = {&#13;
+    "eventId": "00001",&#13;
+    "eventTime": "2015-11-16T16:42:25-04:00",&#13;
+    "eventType": "ProductCreateEvent",&#13;
+    "event": {&#13;
+        "product": {&#13;
+    &#13;
+        "id": "g265-tf85",&#13;
+        "href": "https://host:port/productInventoryManagement/v4/product/g265-tf85",&#13;
+        "description": "product description",&#13;
+        "isBundle": false,&#13;
+        "isCustomerVisible": true,&#13;
+        "name": "Voice Over IP Basic instance for Jean",&#13;
+        "productSerialNumber": "N/A",&#13;
+        "startDate": "2017-11-01T09:37:29.961Z",&#13;
+        "status": "active",&#13;
+        "@baseType": "Product",&#13;
+        "@type": "Product",&#13;
+        "@schemaLocation": "https://host:port/standardProduct.json",&#13;
+        "realizingService": [&#13;
+            {&#13;
+                "id": "123t-78k",&#13;
+                "href": "https...",&#13;
+                "role": "RealizingService",&#13;
+                "@referredType": "Service"&#13;
+            }&#13;
+        ],&#13;
+        "productOffering": {&#13;
+            "id": "PO-101-1",&#13;
+            "href": "https...",&#13;
+            "name": "Voice Over IP Basic",&#13;
+            "@referredType": "ProductOffering"&#13;
+        },&#13;
+        "productOrderItem": [&#13;
+            {&#13;
+                "productOrderId": "1023-98gh",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "2",&#13;
+                "orderItemAction": "add",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "Install order"&#13;
+            },&#13;
+            {&#13;
+                "productOrderId": "df65-gh12",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "2",&#13;
+                "orderItemAction": "change",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "change management order"&#13;
+            },&#13;
+            {&#13;
+                "productOrderId": "5ghh-sd12",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "3",&#13;
+                "orderItemAction": "change",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "change management order"&#13;
+            }&#13;
+        ],&#13;
+        "productCharacteristic": [&#13;
+            {&#13;
+                "name": "Number",&#13;
+                "valueType": "string",&#13;
+                "value": "415 279 7439"&#13;
+            }&#13;
+        ],&#13;
+        "relatedParty": [&#13;
+            {&#13;
+                "id": "45hj-8888",&#13;
+                "href": "https...",&#13;
+                "name": "Jean",&#13;
+                "role": "User",&#13;
+                "@referredType": "Individual"&#13;
+            }&#13;
+        ],&#13;
+        "productSpecification": {&#13;
+            "id": "PS-101",&#13;
+            "href": "https...",&#13;
+            "@referredType": "ProductSpecification",&#13;
+            "version": "1"&#13;
+        }&#13;
+    }&#13;
+    }&#13;
+}</description>
+        <order>1</order>
+        <parameters/>
+        <sys_class_name>sys_atf_parameter_set</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 08:02:01</sys_created_on>
+        <sys_id>61e755dcdbf15010357d29e1ca9619c8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_atf_parameter_set_61e755dcdbf15010357d29e1ca9619c8</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 08:03:03</sys_updated_on>
+        <test display_value="TMF637_Product_InboundEvent_processing">29e7d19cdbf15010357d29e1ca961998</test>
+    </sys_atf_parameter_set>
+    <sys_variable_value action="delete_multiple" query="document_key=61e755dcdbf15010357d29e1ca9619c8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_parameter_set</document>
+        <document_key>61e755dcdbf15010357d29e1ca9619c8</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-30 08:02:01</sys_created_on>
+        <sys_id>a5e755dcdbf15010357d29e1ca9619c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-30 08:03:03</sys_updated_on>
+        <value>{&#13;
+    "eventId": "00001",&#13;
+    "eventTime": "2015-11-16T16:42:25-04:00",&#13;
+    "eventType": "ProductCreateEvent",&#13;
+    "event": {&#13;
+        "product": {&#13;
+    &#13;
+        "id": "g265-tf85",&#13;
+        "href": "https://host:port/productInventoryManagement/v4/product/g265-tf85",&#13;
+        "description": "product description",&#13;
+        "isBundle": false,&#13;
+        "isCustomerVisible": true,&#13;
+        "name": "Voice Over IP Basic instance for Jean",&#13;
+        "productSerialNumber": "N/A",&#13;
+        "startDate": "2017-11-01T09:37:29.961Z",&#13;
+        "status": "active",&#13;
+        "@baseType": "Product",&#13;
+        "@type": "Product",&#13;
+        "@schemaLocation": "https://host:port/standardProduct.json",&#13;
+        "realizingService": [&#13;
+            {&#13;
+                "id": "123t-78k",&#13;
+                "href": "https...",&#13;
+                "role": "RealizingService",&#13;
+                "@referredType": "Service"&#13;
+            }&#13;
+        ],&#13;
+        "productOffering": {&#13;
+            "id": "PO-101-1",&#13;
+            "href": "https...",&#13;
+            "name": "Voice Over IP Basic",&#13;
+            "@referredType": "ProductOffering"&#13;
+        },&#13;
+        "productOrderItem": [&#13;
+            {&#13;
+                "productOrderId": "1023-98gh",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "2",&#13;
+                "orderItemAction": "add",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "Install order"&#13;
+            },&#13;
+            {&#13;
+                "productOrderId": "df65-gh12",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "2",&#13;
+                "orderItemAction": "change",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "change management order"&#13;
+            },&#13;
+            {&#13;
+                "productOrderId": "5ghh-sd12",&#13;
+                "productOrderHref": "https...",&#13;
+                "orderItemId": "3",&#13;
+                "orderItemAction": "change",&#13;
+                "@referredType": "ProductOrder",&#13;
+                "role": "change management order"&#13;
+            }&#13;
+        ],&#13;
+        "productCharacteristic": [&#13;
+            {&#13;
+                "name": "Number",&#13;
+                "valueType": "string",&#13;
+                "value": "415 279 7439"&#13;
+            }&#13;
+        ],&#13;
+        "relatedParty": [&#13;
+            {&#13;
+                "id": "45hj-8888",&#13;
+                "href": "https...",&#13;
+                "name": "Jean",&#13;
+                "role": "User",&#13;
+                "@referredType": "Individual"&#13;
+            }&#13;
+        ],&#13;
+        "productSpecification": {&#13;
+            "id": "PS-101",&#13;
+            "href": "https...",&#13;
+            "@referredType": "ProductSpecification",&#13;
+            "version": "1"&#13;
+        }&#13;
+    }&#13;
+    }&#13;
+}</value>
+        <variable display_value="">69e755dcdbf15010357d29e1ca961958</variable>
+    </sys_variable_value>
+</record_update>

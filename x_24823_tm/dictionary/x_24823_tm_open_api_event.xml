@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Open API Event" max_length="40" name="x_24823_tm_open_api_event" sizeclass="65" type="collection">
+        <element choice="1" label="Action" mandatory="true" max_length="40" name="action" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Create" sequence="10" value="create"/>
+                <element inactive_on_update="false" label="Delete" sequence="20" value="delete"/>
+                <element inactive_on_update="false" label="Update" sequence="20" value="update"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Applicable for REST Resources" max_length="5000" name="applicable_for_rest_resources" reference="sys_ws_operation" reference_qual="sys_scope=f770b6d1db185050357d29e1ca96196f^EQ" reference_qual_condition="sys_scope=f770b6d1db185050357d29e1ca96196f^EQ" type="glide_list"/>
+        <element label="Capability" mandatory="true" max_length="32" name="capability" reference="cmdb_ci_business_capability" reference_qual="department=b86bc750db7d5010357d29e1ca9619a8^active=true^EQ" reference_qual_condition="department=b86bc750db7d5010357d29e1ca9619a8^active=true^EQ" type="reference"/>
+        <element label="Resource Name" max_length="200" name="resource_name" type="string"/>
+        <element display="true" label="TMF Event Name" mandatory="true" max_length="200" name="tmf_event_name" type="string" unique="true"/>
+        <index name="index">
+            <element name="capability"/>
+        </index>
+        <index name="index2">
+            <element name="tmf_event_name"/>
+        </index>
+    </element>
+</database>

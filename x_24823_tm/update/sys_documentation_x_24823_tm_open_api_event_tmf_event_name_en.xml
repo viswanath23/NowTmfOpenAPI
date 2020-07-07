@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="tmf_event_name" label="TMF Event Name" language="en" table="x_24823_tm_open_api_event">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>tmf_event_name</element>
+            <help/>
+            <hint/>
+            <label>TMF Event Name</label>
+            <language>en</language>
+            <name>x_24823_tm_open_api_event</name>
+            <plural>TMF Event Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>viswanath23@gmail.com</sys_created_by>
+            <sys_created_on>2020-06-30 16:43:55</sys_created_on>
+            <sys_id>665f8394db7d5010357d29e1ca9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>TMF Event Name</sys_name>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_x_24823_tm_open_api_event_tmf_event_name_en</sys_update_name>
+            <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+            <sys_updated_on>2020-06-30 16:43:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

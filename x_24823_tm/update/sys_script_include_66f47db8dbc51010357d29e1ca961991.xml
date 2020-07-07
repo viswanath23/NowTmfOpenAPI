@@ -26,12 +26,8 @@ TMF638_ServiceInventory.prototype = {
     processCreateService: function(requestObj, responseObj,restResourceId) {
         try {
             this.logObj = this.logUtils.createInbLog(requestObj, restResourceId);
-
-            var requestBody = requestObj.body; // Returns instance of RESTAPIRequestBody
-            var requestData = requestBody.data; //May be an array or a single object
-
-            // this.mandatoryValidationCheck(requestBody);
-            //   this.executeCreateService(requestBody);
+ var requestData = requestObj.body.data; // Returns the request Object in JSON format.
+            this.processEventRequest(requestData);
             this.buildCreateServiceResponse(responseObj);
             return responseObj;
 
@@ -186,13 +182,13 @@ TMF638_ServiceInventory.prototype = {
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:38:55</sys_created_on>
         <sys_id>66f47db8dbc51010357d29e1ca961991</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>TMF638_ServiceInventory</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_66f47db8dbc51010357d29e1ca961991</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-16 13:03:04</sys_updated_on>
+        <sys_updated_on>2020-07-07 06:26:14</sys_updated_on>
     </sys_script_include>
 </record_update>

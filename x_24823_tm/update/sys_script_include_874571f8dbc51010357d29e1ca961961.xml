@@ -10,11 +10,11 @@
         <script><![CDATA[var TMF639_ResourceInventory = Class.create();
 TMF639_ResourceInventory.prototype = {
     initialize: function() {
-		 this.logUtils = new x_24823_tm.InboundWsLogUtils();
+        this.logUtils = new x_24823_tm.InboundWsLogUtils();
         this.logObj = "";
-        this.REST_RESOURCE_createResource_id = "724ca166db555410357d29e1ca961956";
+
         this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
-	},
+    },
     /***
 	 * processCreateResource -  Will process inbound Resource request for Create Resource  
          * @param: (M) requestObj - request object as created in inbound scripted API
@@ -23,15 +23,11 @@ TMF639_ResourceInventory.prototype = {
          * @return- responseObj
          *
          ***/
-    processCreateResource: function(requestObj, responseObj) {
+    processCreateResource: function(requestObj, responseObj, restResource_id) {
         try {
-            this.logObj = this.logUtils.createInbLog(requestObj, this.REST_RESOURCE_createResource_id);
-
-            var requestBody = requestObj.body; // Returns instance of RESTAPIRequestBody
-            var requestData = requestBody.data; //May be an array or a single object
-
-            // this.mandatoryValidationCheck(requestBody);
-            //   this.executeCreateResource(requestBody);
+            this.logObj = this.logUtils.createInbLog(requestObj, restResource_id);
+            var requestData = requestObj.body.data; // Returns the request Object in JSON format.
+            this.processEventRequest(requestData);
             this.buildCreateResourceResponse(responseObj);
             return responseObj;
 
@@ -142,7 +138,7 @@ TMF639_ResourceInventory.prototype = {
 
     buildCreateResourceResponse: function(responseObj) {
         try {
- var body = {};
+            var body = {};
             body.message = "Resource is created successfully";
             this.logUtils.updateInbLog(this.logObj, JSON.stringify(body), "2", this.SUCCESSFULLY_CREATED_HTTP_CODE);
             responseObj.setStatus(this.SUCCESSFULLY_CREATED_HTTP_CODE);
@@ -157,13 +153,13 @@ TMF639_ResourceInventory.prototype = {
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:40:19</sys_created_on>
         <sys_id>874571f8dbc51010357d29e1ca961961</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>TMF639_ResourceInventory</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_874571f8dbc51010357d29e1ca961961</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-15 11:03:28</sys_updated_on>
+        <sys_updated_on>2020-07-07 06:29:15</sys_updated_on>
     </sys_script_include>
 </record_update>

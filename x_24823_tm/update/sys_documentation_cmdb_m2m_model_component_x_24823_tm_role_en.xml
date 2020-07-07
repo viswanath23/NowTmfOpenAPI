@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_24823_tm_role" label="role" language="en" table="cmdb_m2m_model_component">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_24823_tm_role</element>
+            <help/>
+            <hint/>
+            <label>role</label>
+            <language>en</language>
+            <name>cmdb_m2m_model_component</name>
+            <plural>roles</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>arup.sinha</sys_created_by>
+            <sys_created_on>2020-07-06 12:39:37</sys_created_on>
+            <sys_id>fef0955edbb95010357d29e1ca96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>role</sys_name>
+            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_update_name>sys_documentation_cmdb_m2m_model_component_x_24823_tm_role_en</sys_update_name>
+            <sys_updated_by>arup.sinha</sys_updated_by>
+            <sys_updated_on>2020-07-06 12:39:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_parameter_set">
+    <sys_atf_parameter_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="1">61e755dcdbf15010357d29e1ca9619c8</copied_from>
+        <description>Event Request Payload = {&#13;
+    "eventId": "00001",&#13;
+    "eventType": "ServiceSpecificationCreateNotification",&#13;
+    "eventTime": "2020-05-14",&#13;
+    "event": {&#13;
+        "serviceSpecification": {&#13;
+            "id": "7655",&#13;
+            "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecification/7655",&#13;
+            "name": "Firewall Service",&#13;
+            "description": "This service specification describes a firewall service that can be deployed in customer premise.",&#13;
+            "version": "2.1",&#13;
+            "validFor": {&#13;
+                "startDateTime": "2017-08-23T00:00",&#13;
+                "endDateTime": "2018-03-25T00:00"&#13;
+            },&#13;
+            "lastUpdate": "2017-08-27T00:00",&#13;
+            "lifecycleStatus": "Active",&#13;
+            "isBundle": false,&#13;
+            "resourceSpecification": [&#13;
+                {&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v3/resourceSpecification/42",&#13;
+                    "id": "42",&#13;
+                    "name": "Firewall",&#13;
+                    "version": "1.0",&#13;
+                    "@referredType": "ResourceFunctionSpec"&#13;
+                }&#13;
+            ],&#13;
+            "attachment": [&#13;
+                {&#13;
+                    "description": "This attachment gives a block diagram of the firewall.",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/documentManagement/v3/attachment/22",&#13;
+                    "id": "22",&#13;
+                    "url": "https://mycsp.com:7070/docloader?docnum=3534536"&#13;
+                }&#13;
+            ],&#13;
+            "serviceSpecCharacteristic": [&#13;
+                {&#13;
+                    "name": "OperatingSystem",&#13;
+                    "description": "This characteristic describes the operating system run by the service",&#13;
+                    "valueType": "string",&#13;
+                    "configurable": true,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-12T00:00",&#13;
+                        "endDateTime": "2018-03-07T00:00"&#13;
+                    },&#13;
+                    "@valueSchemaLocation": "",&#13;
+                    "minCardinality": 0,&#13;
+                    "maxCardinality": 1,&#13;
+                    "isUnique": true,&#13;
+                    "regex": "",&#13;
+                    "extensible": false,&#13;
+                    "serviceSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "valueType": "string",&#13;
+                            "isDefault": true,&#13;
+                            "value": "Android KitKat",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-06T00:00",&#13;
+                                "endDateTime": "2018-03-07T00:00"&#13;
+                            }&#13;
+                        }&#13;
+&#13;
+                    ],&#13;
+                    "serviceSpecCharRelationship": [&#13;
+                        {&#13;
+                            "relationshipType": "dependency",&#13;
+                            "role": "",&#13;
+                            "id": "4690",&#13;
+                            "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecificationCharacteristic/4690",&#13;
+                            "name": "OperatingSystem",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-11T00:00",&#13;
+                                "endDateTime": "2018-03-07T00:00"&#13;
+                            }&#13;
+                        }&#13;
+                    ],&#13;
+                    "@type": "ServiceSpecCharacteristic",&#13;
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecCharacteristic.schema.json"&#13;
+                },&#13;
+                {&#13;
+                    "name": "Scalability",&#13;
+                    "description": "Scalability parameters for this resource facing service spec ",&#13;
+                    "valueType": "CapabilityScalable",&#13;
+                    "configurable": true,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-17T00:00",&#13;
+                        "endDateTime": "2018-03-12T00:00"&#13;
+                    },&#13;
+                    "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json",&#13;
+                    "minCardinality": 0,&#13;
+                    "maxCardinality": 1,&#13;
+                    "isUnique": true,&#13;
+                    "regex": "",&#13;
+                    "extensible": true,&#13;
+                    "serviceSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "valueType": "object",&#13;
+                            "isDefault": true,&#13;
+                            "value": {&#13;
+                                "minInstances": 1,&#13;
+                                "maxInstances": 1000,&#13;
+                                "@type": "CapabilityScalable",&#13;
+                                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json"&#13;
+                            },&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-17T00:00",&#13;
+                                "endDateTime": "2018-03-12T00:00"&#13;
+                            },&#13;
+                            "@type": "ServiceSpecCharacteristicValue"&#13;
+                        }&#13;
+                    ],&#13;
+                    "serviceSpecCharRelationship": [],&#13;
+                    "@type": "ServiceSpecCharacteristic",&#13;
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecCharacteristic.schema.json"&#13;
+                }&#13;
+            ],&#13;
+            "relatedParty": [&#13;
+&#13;
+{&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/partyManagement/v3/organization/3643",&#13;
+                    "id": "3643",&#13;
+                    "name": "Firewall Express",&#13;
+                    "role": "Supplier"&#13;
+                }&#13;
+            ],&#13;
+            "serviceSpecRelationship": [&#13;
+                {&#13;
+                    "relationshipType": "dependency",&#13;
+                    "role": "dependent",&#13;
+                    "id": "5563",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecification/5563",&#13;
+                    "name": "Points to the Deep Packet Inspection service on which this Firewall service depends",&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-25T00:00",&#13;
+                        "endDateTime": "2018-03-25T00:00"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "serviceLevelSpecification": [&#13;
+                {&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/serviceQualityManagement/v3/serviceLevelSpecification/8899",&#13;
+                    "id": "8899",&#13;
+                    "name": "Platinum"&#13;
+                }&#13;
+            ],&#13;
+            "targetServiceSchema": {&#13;
+                "@type": "RFS",&#13;
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/RFS.schema.json"&#13;
+            },&#13;
+            "@type": "ResourceFacingServiceSpecification",&#13;
+            "@schemaLocation": "https://mycsp.com:8080/tmfapi/schema/Service/ResourceFacingServiceSpecification.schema.json",&#13;
+            "@baseType": "ServiceSpecification"&#13;
+        }&#13;
+    }&#13;
+}</description>
+        <order>1</order>
+        <parameters/>
+        <sys_class_name>sys_atf_parameter_set</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-07-01 05:23:37</sys_created_on>
+        <sys_id>c33d7dacdbb99010357d29e1ca961912</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_atf_parameter_set_c33d7dacdbb99010357d29e1ca961912</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-07-01 07:31:57</sys_updated_on>
+        <test display_value="TMF633_ServiceCatalog_InboundEvent_processing">fe3df9acdbb99010357d29e1ca9619a0</test>
+    </sys_atf_parameter_set>
+    <sys_variable_value action="delete_multiple" query="document_key=c33d7dacdbb99010357d29e1ca961912"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_parameter_set</document>
+        <document_key>c33d7dacdbb99010357d29e1ca961912</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-07-01 05:23:37</sys_created_on>
+        <sys_id>c73d7dacdbb99010357d29e1ca961913</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-07-01 07:31:57</sys_updated_on>
+        <value>{&#13;
+    "eventId": "00001",&#13;
+    "eventType": "ServiceSpecificationCreateNotification",&#13;
+    "eventTime": "2020-05-14",&#13;
+    "event": {&#13;
+        "serviceSpecification": {&#13;
+            "id": "7655",&#13;
+            "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecification/7655",&#13;
+            "name": "Firewall Service",&#13;
+            "description": "This service specification describes a firewall service that can be deployed in customer premise.",&#13;
+            "version": "2.1",&#13;
+            "validFor": {&#13;
+                "startDateTime": "2017-08-23T00:00",&#13;
+                "endDateTime": "2018-03-25T00:00"&#13;
+            },&#13;
+            "lastUpdate": "2017-08-27T00:00",&#13;
+            "lifecycleStatus": "Active",&#13;
+            "isBundle": false,&#13;
+            "resourceSpecification": [&#13;
+                {&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v3/resourceSpecification/42",&#13;
+                    "id": "42",&#13;
+                    "name": "Firewall",&#13;
+                    "version": "1.0",&#13;
+                    "@referredType": "ResourceFunctionSpec"&#13;
+                }&#13;
+            ],&#13;
+            "attachment": [&#13;
+                {&#13;
+                    "description": "This attachment gives a block diagram of the firewall.",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/documentManagement/v3/attachment/22",&#13;
+                    "id": "22",&#13;
+                    "url": "https://mycsp.com:7070/docloader?docnum=3534536"&#13;
+                }&#13;
+            ],&#13;
+            "serviceSpecCharacteristic": [&#13;
+                {&#13;
+                    "name": "OperatingSystem",&#13;
+                    "description": "This characteristic describes the operating system run by the service",&#13;
+                    "valueType": "string",&#13;
+                    "configurable": true,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-12T00:00",&#13;
+                        "endDateTime": "2018-03-07T00:00"&#13;
+                    },&#13;
+                    "@valueSchemaLocation": "",&#13;
+                    "minCardinality": 0,&#13;
+                    "maxCardinality": 1,&#13;
+                    "isUnique": true,&#13;
+                    "regex": "",&#13;
+                    "extensible": false,&#13;
+                    "serviceSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "valueType": "string",&#13;
+                            "isDefault": true,&#13;
+                            "value": "Android KitKat",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-06T00:00",&#13;
+                                "endDateTime": "2018-03-07T00:00"&#13;
+                            }&#13;
+                        }&#13;
+&#13;
+                    ],&#13;
+                    "serviceSpecCharRelationship": [&#13;
+                        {&#13;
+                            "relationshipType": "dependency",&#13;
+                            "role": "",&#13;
+                            "id": "4690",&#13;
+                            "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecificationCharacteristic/4690",&#13;
+                            "name": "OperatingSystem",&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-11T00:00",&#13;
+                                "endDateTime": "2018-03-07T00:00"&#13;
+                            }&#13;
+                        }&#13;
+                    ],&#13;
+                    "@type": "ServiceSpecCharacteristic",&#13;
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecCharacteristic.schema.json"&#13;
+                },&#13;
+                {&#13;
+                    "name": "Scalability",&#13;
+                    "description": "Scalability parameters for this resource facing service spec ",&#13;
+                    "valueType": "CapabilityScalable",&#13;
+                    "configurable": true,&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-17T00:00",&#13;
+                        "endDateTime": "2018-03-12T00:00"&#13;
+                    },&#13;
+                    "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json",&#13;
+                    "minCardinality": 0,&#13;
+                    "maxCardinality": 1,&#13;
+                    "isUnique": true,&#13;
+                    "regex": "",&#13;
+                    "extensible": true,&#13;
+                    "serviceSpecCharacteristicValue": [&#13;
+                        {&#13;
+                            "valueType": "object",&#13;
+                            "isDefault": true,&#13;
+                            "value": {&#13;
+                                "minInstances": 1,&#13;
+                                "maxInstances": 1000,&#13;
+                                "@type": "CapabilityScalable",&#13;
+                                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/CapabilityScalable.schema.json"&#13;
+                            },&#13;
+                            "validFor": {&#13;
+                                "startDateTime": "2017-08-17T00:00",&#13;
+                                "endDateTime": "2018-03-12T00:00"&#13;
+                            },&#13;
+                            "@type": "ServiceSpecCharacteristicValue"&#13;
+                        }&#13;
+                    ],&#13;
+                    "serviceSpecCharRelationship": [],&#13;
+                    "@type": "ServiceSpecCharacteristic",&#13;
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecCharacteristic.schema.json"&#13;
+                }&#13;
+            ],&#13;
+            "relatedParty": [&#13;
+&#13;
+{&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/partyManagement/v3/organization/3643",&#13;
+                    "id": "3643",&#13;
+                    "name": "Firewall Express",&#13;
+                    "role": "Supplier"&#13;
+                }&#13;
+            ],&#13;
+            "serviceSpecRelationship": [&#13;
+                {&#13;
+                    "relationshipType": "dependency",&#13;
+                    "role": "dependent",&#13;
+                    "id": "5563",&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v3/serviceSpecification/5563",&#13;
+                    "name": "Points to the Deep Packet Inspection service on which this Firewall service depends",&#13;
+                    "validFor": {&#13;
+                        "startDateTime": "2017-08-25T00:00",&#13;
+                        "endDateTime": "2018-03-25T00:00"&#13;
+                    }&#13;
+                }&#13;
+            ],&#13;
+            "serviceLevelSpecification": [&#13;
+                {&#13;
+                    "href": "https://mycsp.com:8080/tmf-api/serviceQualityManagement/v3/serviceLevelSpecification/8899",&#13;
+                    "id": "8899",&#13;
+                    "name": "Platinum"&#13;
+                }&#13;
+            ],&#13;
+            "targetServiceSchema": {&#13;
+                "@type": "RFS",&#13;
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/RFS.schema.json"&#13;
+            },&#13;
+            "@type": "ResourceFacingServiceSpecification",&#13;
+            "@schemaLocation": "https://mycsp.com:8080/tmfapi/schema/Service/ResourceFacingServiceSpecification.schema.json",&#13;
+            "@baseType": "ServiceSpecification"&#13;
+        }&#13;
+    }&#13;
+}</value>
+        <variable display_value="">073df9acdbb99010357d29e1ca9619a5</variable>
+    </sys_variable_value>
+</record_update>

@@ -5,7 +5,9 @@
         <assessment/>
         <content_page/>
         <device_type/>
-        <filter/>
+        <filter table="cmdb_model">cmdb_model_categoryLIKEb35c95cddbfd1410357d29e1ca961953^EQ<item endquery="false" field="cmdb_model_category" goto="false" newquery="false" operator="LIKE" or="false" value="b35c95cddbfd1410357d29e1ca961953"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
         <hint>List of all ProductOfferings</hint>
         <homepage/>
         <image/>
@@ -13,8 +15,8 @@
         <map_page/>
         <mobile_title>REST API Definitions</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_24823_tm_product_offering</name>
-        <order>209</order>
+        <name>cmdb_model</name>
+        <order>1050</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -25,19 +27,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a0bd8178dbe15410357d29e1ca9619d6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>x_24823_tm_product_offering</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Product Offerings</sys_name>
         <sys_overrides/>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_app_module_a0bd8178dbe15410357d29e1ca9619d6</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-19 17:07:49</sys_updated_on>
+        <sys_updated_on>2020-07-06 12:43:31</sys_updated_on>
         <timeline_page/>
-        <title>Product Offering Models</title>
+        <title>Product Offerings</title>
         <uncancelable>false</uncancelable>
-        <view_name/>
+        <view_name>telecom</view_name>
         <window_name/>
     </sys_app_module>
 </record_update>

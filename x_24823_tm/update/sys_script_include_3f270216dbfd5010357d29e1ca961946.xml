@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_24823_tm.EventListnerUtils</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EventListnerUtils</name>
+        <script><![CDATA[var EventListnerUtils = Class.create();
+EventListnerUtils.prototype = {
+    initialize: function() {},
+    /***	 * isNotificationRequest -  will validate the input request is of Notification or not by checking the 'eventid' parameter in the requestbody
+               * @param: (M) requestBody - request object as created in inbound scripted API
+                    	
+               * @return- true/false;
+               *
+               ***/
+
+    isNotificationRequest: function(requestBody) {
+        try {
+            /* Validation to accept only String/Object to verify it is a Notifiaton request or not */
+            if ((typeof requestBody) !== 'string' && (typeof requestBody) !== 'object') {
+                throw "The input requestBody to function 'isNotificationRequest' should be either Object/String ";
+            }
+
+            if ((typeof requestBody) === 'string') {
+                requestBody = JSON.parse(requestBody); // converting into JSON object if the passed object is String
+            }
+            var eventIdNotExist = gs.nil(requestBody['eventId']);
+            var eventTypeNotExist = gs.nil(requestBody['eventType']);
+            var eventNotExist = gs.nil(requestBody['event']);
+
+            if (eventIdNotExist) {
+                throw "'eventId' attribute is missing.";
+            }
+            if (eventTypeNotExist) {
+                throw "'eventType' attribute is missing.";
+            }
+            if (eventNotExist) {
+                throw "'event'  attribute is missing.";
+            }
+            return "true";
+
+        } catch (err) {
+            gs.error("EventListnerUtils1::isNotificationRequest >> Error occured \n " + err.toString());
+            return "false";
+        }
+    },
+    /***	 * isNotificationRequest -  will validate the input request is of Notification or not by checking the 'eventid' parameter in the requestbody
+               * @param: (M) requestBody - request object as created in inbound scripted API
+            
+          	
+               * @return- GlideRecord Object of target record that was updated;
+               *
+               ***/
+
+    processEventRequest: function(requestBody) {
+        var returnObj = {};
+        try {
+            var prefix = "$.event.";
+            if (gs.nil(requestBody)) {
+                throw "RequestBody Data is mandatory";
+            }
+            if (!this.isNotificationRequest) {
+                throw "Request is not of Event notification type";
+
+            }
+            for (var key in requestBody.event) {
+                prefix += key + ".";
+            }
+            if (requestBody instanceof Object) {
+
+                var mappingObj = this.getConfigurtationMetaData(requestBody, prefix);
+                if (gs.nil(mappingObj)) {
+                    throw "Mapping object not found";
+                }
+                var configObj = JSON.parse(mappingObj.configuration_data);
+                if (gs.nil(configObj.servicenowTable)) {
+                    throw "servicenowTable is not defined in the Mapping configuration record #" + mappingObj.number;
+                }
+
+                var colMapping = configObj.columnMapping;
+                if (gs.nil(colMapping)) {
+                    throw "ColumnMapping is not defined in the Mapping configuration record #" + mappingObj.number;
+                }
+                /*
+                Check if there is any record already exist in Servicenow Database. 
+                If found, update the record
+                 else insert the new recrod 
+                 */
+                var grTargetRecord = new GlideRecord(configObj.servicenowTable + "");
+                var uniqueJsonpathExp = "$.[?(@.unique=='true')]";
+                var coaleseFields = global.jsonPath(colMapping, uniqueJsonpathExp);
+                
+                for (var j in coaleseFields) {
+                    var pathValue = global.jsonPath(requestBody, prefix + coaleseFields[j].pathname);
+                    if ((typeof pathValue) === "object") {
+                        grTargetRecord.addQuery(coaleseFields[j].servicenowColumn, pathValue.join());
+                    }
+                }
+
+                grTargetRecord.setLimit(1);
+                grTargetRecord.query();
+              
+                if (grTargetRecord.next()) {
+                    this.updateRecord(grTargetRecord, colMapping, requestBody, prefix);
+                } else {
+                    this.createRecord(grTargetRecord, colMapping, requestBody, prefix);
+                }
+
+                returnObj.status = "success";
+                returnObj.record = grTargetRecord;
+                return returnObj;
+
+
+            }
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::processEventRequest >> Error occured \n " + err.toString());
+
+            var errObj = x_24823_tm.WsErrorUtils.InvalidInput(err.toString());
+            returnObj.status = "failed";
+            returnObj.record = errObj;
+            return returnObj;
+        }
+    },
+
+    getConfigurtationMetaData: function(requestData, prefix) {
+        try {
+            /* Query the mapping matrix table to fetch the corresponding configuration for the given basetype & type. 
+             */
+
+            var encQuery = "active=true";
+
+            var baseTypeVal = global.jsonPath(requestData, prefix + "@baseType");
+            /* Filter with request @Basetype or with '*' ie default value */
+            if (baseTypeVal) {
+                encQuery += "^base_type=*^ORbase_type=" + baseTypeVal;
+            } else {
+                encQuery += "^base_type=*";
+            }
+
+            var typeVal = global.jsonPath(requestData, prefix + "@type");
+
+            /* Filter with request @Type or * ie default value  */
+            if (typeVal) {
+                encQuery += "^type=*^ORtype=" + typeVal;
+            } else {
+                encQuery += "^type=*";
+            }
+
+
+            var grMappingConfig = new GlideRecord("x_24823_tm_mapping_sheet");
+            grMappingConfig.addEncodedQuery(encQuery);
+            grMappingConfig.orderByDesc('order'); // If multiple records are fetched, selected the record with hightest value in the Order field
+            grMappingConfig.setLimit(1);
+            grMappingConfig.query();
+
+
+
+
+            if (grMappingConfig.next()) {
+                return grMappingConfig;
+            } else {
+                throw "Active mapping configuration record not found with the BaseType {0}, Type {1}",
+                    [baseTypeVal, typeVal];
+            }
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::getConfigurtationMetaData >> Error occured \n " + err.toString());
+            return "";
+        }
+    },
+
+    updateRecord: function(grTargetRecord, colMapping, requestData, prefix) {
+		gs.debug("EventListnerUtils1::updateRecord >> Starts ");
+        try {
+
+            for (var i in colMapping) {
+                this.setRecordField(grTargetRecord, colMapping[i], requestData, prefix);
+                // grTargetRecord.setValue(colMapping[i].servicenowColumn + "", global.jsonPath(requestData, prefix + colMapping[i].pathname).toString());
+            }
+            grTargetRecord.update();
+			gs.debug("EventListnerUtils1::updateRecord >> Ends ");
+            return grTargetRecord;
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::updateRecord >> Error occured \n " + err.toString());
+
+        }
+
+    },
+
+    createRecord: function(grTargetRecord, colMapping, requestData, prefix) {
+        try {
+            grTargetRecord.initialize();
+            for (var i in colMapping) {
+                this.setRecordField(grTargetRecord, colMapping[i], requestData, prefix);
+
+            }
+            grTargetRecord.insert();
+            return grTargetRecord;
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::createRecord >> Error occured \n " + err.toString());
+
+        }
+
+    },
+
+    setRecordField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+            switch (colMappingMetaData['type'] + "") {
+                case "choice":
+                    this.setChoiceField(grTargetRecord, colMappingMetaData, requestData, prefix);
+                    break;
+                case "constant":
+                    this.setConstantField(grTargetRecord, colMappingMetaData, requestData, prefix);
+                    break;
+                case "referenceField":
+                    /* this.setReferenceField(grTargetRecord, colMappingMetaData, requestData, prefix); */
+                    break;
+                case "referenceTable":
+                    /* this.setReferenceTable(grTargetRecord, colMappingMetaData, requestData, prefix); */
+                    break;
+                case "collection":
+                    this.setCollectionField(grTargetRecord, colMappingMetaData, requestData, prefix);
+                    break;
+                case "true/false":
+                    this.setBooleanField(grTargetRecord, colMappingMetaData, requestData, prefix);
+                    break;
+                case "string":
+                default:
+                    this.setStringField(grTargetRecord, colMappingMetaData, requestData, prefix);
+                    break;
+            }
+
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setChoiceField >> Error occured \n " + err.toString());
+
+        }
+    },
+
+    setChoiceField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+
+            var inputVal = global.jsonPath(requestData, prefix + colMappingMetaData.pathname);
+            var jsonpathExp = "$.[*].choiceMapping.[?(@.sourceValue=='" + inputVal + "')].targetValue";
+            var targetVal = global.jsonPath(colMappingMetaData, jsonpathExp);
+            grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", targetVal);
+
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setChoiceField >> Error occured \n " + err.toString());
+
+        }
+
+    },
+
+    setReferenceField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+
+            var refTable = global.jsonPath(colMappingMetaData, "$.referenceTable");
+            var jsonpathExp4RefId = "$.[*].referenceFieldMapping.[?(@.RefUnique=='true')]";
+            var refMap = global.jsonPath(colMappingMetaData, jsonpathExp4RefId);
+            var sourceRefId = global.jsonPath(requestData, prefix + colMappingMetaData.pathname + "." + refMap.pathname);
+            var refCol = refMap.servicenowColumn;
+            var grRefTable = new GlideRecord(refTable);
+            if (grRefTable.get(refCol, sourceRefId)) {
+                grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", targetVal);
+            } else {
+                /* If the target record not found, create a new one with the provided information */
+                var refColMapping = global.jsonPath(colMappingMetaData, "$.referenceFieldMapping");
+                grRefTable.initialize();
+                this.createRecord(grRefTable, refColMapping, requestData, prefix);
+
+                grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", grRefTable.sys_id + "");
+            }
+
+
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setReferenceField >> Error occured \n " + err.toString());
+
+        }
+    },
+
+    setReferenceTable: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+
+            var refTable = global.jsonPath(colMappingMetaData, "$.referenceTable");
+            var jsonpathExp4RefId = "$.[*].referenceFieldMapping.[?(@.RefUnique=='true')]";
+            var refMap = global.jsonPath(colMappingMetaData, jsonpathExp4RefId);
+            var sourceRefId = global.jsonPath(requestData, prefix + colMappingMetaData.pathname + "." + refMap.pathname);
+            var refCol = refMap.servicenowColumn;
+            var grRefTable = new GlideRecord(refTable);
+            if (grRefTable.get(refCol, sourceRefId)) {
+                grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", targetVal);
+            } else {
+                /* If the target record not found, create a new one with the provided information */
+                var refColMapping = global.jsonPath(colMappingMetaData, "$.referenceFieldMapping");
+                grRefTable.initialize();
+                this.createRecord(grRefTable, refColMapping, requestData, prefix);
+
+                grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", grRefTable.sys_id + "");
+            }
+
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setReferenceTable >> Error occured \n " + err.toString());
+
+        }
+    },
+    /* This function will fetch the servicenow record internal sys_id based on the input parameters. If the record is not found, then it will insert the record. This function is used for Referece field settings 
+    @Input "table_name" >> 
+    @Input "fieldMapping" >>
+
+    @output servicenow record sys_id.
+    */
+
+    getSerRecId: function(table_name, fieldMapping) {
+        try {
+            var record = new GlideRecord(table_name);
+            for (var key in fieldMapping) {
+                if (fieldMapping.hasOwnProperty(key)) {
+
+                    record.addQuery(key, fieldMapping[key]);
+                }
+            }
+            record.setLimit(1);
+            record.query();
+            if (record.hasNext()) {
+                record.next();
+
+            } else {
+                record.initialize();
+                for (var key in fieldMapping) {
+                    if (fieldMapping.hasOwnProperty(key)) {
+
+                        record.setValue(key, fieldMapping[key]);
+                    }
+                }
+                record.insert();
+            }
+            return record.getUniqueValue();
+        } catch (error) {
+            gs.addErrorMessage("EventListnerUtils1::getSerRecId >> Error occured \n " + err.toString());
+            return "";
+        }
+    },
+
+    setBooleanField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+            var inputVal = global.jsonPath(requestData, prefix + colMappingMetaData.pathname);
+            var jsonpathExp = "$.[*].boleanMapping.[?(@.sourceValue=='" + inputVal + "')].targetValue";
+            var targetVal = global.jsonPath(colMappingMetaData, jsonpathExp);
+            grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", targetVal);
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setBooleanField >> Error occured \n " + err.toString());
+
+        }
+    },
+
+    setCollectionField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+            var existingValue = grTargetRecord.getValue(colMappingMetaData.servicenowColumn) + "\n";
+            var pathValue = global.jsonPath(requestData, prefix + colMappingMetaData.pathname);
+            if (typeof pathValue == "string") {
+                existingValue += colMappingMetaData.pathname + "\t\t:" + pathValue;
+            } else if (typeof pathValue == "object") {
+                existingValue += colMappingMetaData.pathname + "\t\t:" + JSON.parse(pathValue);
+            } else {
+                existingValue += colMappingMetaData.pathname + "\t\t:" + pathValue;
+            }
+
+            grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", existingValue);
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setCollectionField >> Error occured \n " + err.toString());
+
+        }
+    },
+
+    setStringField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+            var pathValue = global.jsonPath(requestData, prefix + colMappingMetaData.pathname);
+
+            if ((typeof pathValue) === 'object') {
+                grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", pathValue.join());
+            }
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setStringField >> Error occured \n " + err.toString());
+
+        }
+    },
+    setConstantField: function(grTargetRecord, colMappingMetaData, requestData, prefix) {
+        try {
+            grTargetRecord.setValue(colMappingMetaData.servicenowColumn + "", colMappingMetaData.pathname);
+        } catch (err) {
+            gs.addErrorMessage("EventListnerUtils1::setStringField >> Error occured \n " + err.toString());
+
+        }
+    },
+    type: 'EventListnerUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-07-06 16:40:36</sys_created_on>
+        <sys_id>3f270216dbfd5010357d29e1ca961946</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>EventListnerUtils</sys_name>
+        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_script_include_3f270216dbfd5010357d29e1ca961946</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-07-07 06:13:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

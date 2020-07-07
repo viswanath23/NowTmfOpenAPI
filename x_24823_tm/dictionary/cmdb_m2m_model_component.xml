@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Model Component" max_length="40" name="cmdb_m2m_model_component" sizeclass="37" type="collection">
+        <element label="relationshipType" max_length="32" name="x_24823_tm_relationship_type" type="string"/>
+        <element label="role" max_length="32" name="x_24823_tm_role" type="string"/>
+    </element>
+</database>

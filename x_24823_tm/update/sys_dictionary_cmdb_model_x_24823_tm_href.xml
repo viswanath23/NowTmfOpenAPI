@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>href</column_label>
+        <column_label>Schema Location</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -54,14 +54,14 @@
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-06-26 07:56:41</sys_created_on>
         <sys_id>5f20748bdbe5d010357d29e1ca961921</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>href</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Schema Location</sys_name>
         <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
         <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_dictionary_cmdb_model_x_24823_tm_href</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-06-26 07:56:41</sys_updated_on>
+        <sys_updated_on>2020-07-06 07:51:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

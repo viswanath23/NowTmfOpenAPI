@@ -8,7 +8,7 @@
         <description/>
         <name>TMF637_ProductInventory</name>
         <script><![CDATA[var TMF637_ProductInventory = Class.create();
-TMF637_ProductInventory.prototype = {
+TMF637_ProductInventory.prototype = Object.extendsObject(x_24823_tm.EventListnerUtils,{
     initialize: function() {
 		
 		this.logUtils = new x_24823_tm.InboundWsLogUtils();
@@ -37,6 +37,7 @@ TMF637_ProductInventory.prototype = {
 
         } catch (err) {
             gs.error("TMF637_ProductInventory::processCreateProduct >> Error occured " + err.toString());
+			return x_24823_tm.WsErrorUtils.TechnicalError(err.toString());
         }
     },
 	
@@ -58,6 +59,7 @@ TMF637_ProductInventory.prototype = {
 
         } catch (err) {
             gs.error("TMF637_ProductInventory::processRetrieveProduct >> Error occured " + err.toString());
+			x_24823_tm.WsErrorUtils.TechnicalError(err.toString());
         }
     },
 	
@@ -218,18 +220,18 @@ TMF637_ProductInventory.prototype = {
 	
 
     type: 'TMF637_ProductInventory'
-};]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:38:23</sys_created_on>
         <sys_id>23a4f538dbc51010357d29e1ca961977</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>TMF637_ProductInventory</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_23a4f538dbc51010357d29e1ca961977</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-07-07 06:25:50</sys_updated_on>
+        <sys_updated_on>2020-07-08 08:13:38</sys_updated_on>
     </sys_script_include>
 </record_update>

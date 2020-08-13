@@ -11,9 +11,9 @@
         <sys_id>45393de4dbb99010357d29e1ca9619d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Unit Testing - Server Scripts</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_atf_test_suite_45393de4dbb99010357d29e1ca9619d0</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
         <sys_updated_on>2020-07-01 05:06:43</sys_updated_on>

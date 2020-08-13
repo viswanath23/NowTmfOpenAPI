@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Sold Product" max_length="40" name="sn_install_base_sold_product" sizeclass="29" type="collection">
+        <element label="contact" max_length="32" name="x_24823_tm_contact" reference="customer_contact" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="id" max_length="100" name="x_24823_tm_id" type="string"/>
+        <index name="index">
+            <element name="x_24823_tm_contact"/>
+        </index>
+    </element>
+</database>

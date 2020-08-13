@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="BP_Creds">b7a946fadbf11010357d29e1ca961945</basic_auth_profile>
+        <basic_auth_user/>
+        <content>{&#13;
+	"interface": "cfsComplete",&#13;
+	"inputs": {&#13;
+		"state": "active"&#13;
+	}&#13;
+}</content>
+        <function_name>POST</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Resource Operation BP [ POST ]</qualified_name>
+        <rest_endpoint>http://52.23.8.148:8765/blueplanet/bpocore/market/api/v1/resources/5f041b94-e0bf-4a82-adcf-c9a4f2a91946/operations</rest_endpoint>
+        <rest_message display_value="Resource Operation BP">dbce35fedbb11010357d29e1ca961924</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>arup.sinha</sys_created_by>
+        <sys_created_on>2020-07-08 05:17:13</sys_created_on>
+        <sys_id>29eeb5badbb11010357d29e1ca96196a</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>POST</sys_name>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_29eeb5badbb11010357d29e1ca96196a</sys_update_name>
+        <sys_updated_by>arup.sinha</sys_updated_by>
+        <sys_updated_on>2020-07-08 08:07:28</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

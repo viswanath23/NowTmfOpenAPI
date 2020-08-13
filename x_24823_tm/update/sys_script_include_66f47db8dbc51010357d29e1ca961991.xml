@@ -8,11 +8,11 @@
         <description/>
         <name>TMF638_ServiceInventory</name>
         <script><![CDATA[var TMF638_ServiceInventory = Class.create();
-TMF638_ServiceInventory.prototype = {
+TMF638_ServiceInventory.prototype = Object.extendsObject(x_24823_tm.EventListnerUtils, {
     initialize: function() {
         this.logUtils = new x_24823_tm.InboundWsLogUtils();
         this.logObj = "";
-              this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
+        this.SUCCESSFULLY_CREATED_HTTP_CODE = "201";
 
     },
     /***
@@ -23,19 +23,91 @@ TMF638_ServiceInventory.prototype = {
          * @return- responseObj
          *
          ***/
-    processCreateService: function(requestObj, responseObj,restResourceId) {
+    processCreateService: function(requestObj, responseObj, restResourceId) {
         try {
             this.logObj = this.logUtils.createInbLog(requestObj, restResourceId);
- var requestData = requestObj.body.data; // Returns the request Object in JSON format.
+            var requestData = requestObj.body.data; // Returns the request Object in JSON format.
             this.processEventRequest(requestData);
+            var eventObj = requestData.event;
+            for (var key in eventObj) {
+                var resourceType = eventObj[key]['@type'];
+                if ((resourceType === "digicobase.resourceTypes.MaintenanceCfs") || (resourceType === "digicobase.resourceTypes.ServiceDeskCfs")) {
+                    this.executeManagedService(eventObj[key]);
+                }
+            }
+
+
             this.buildCreateServiceResponse(responseObj);
             return responseObj;
 
         } catch (err) {
             gs.error("TMF638_ServiceInventory::processCreateService >> Error occured " + err.toString());
+            return x_24823_tm.WsErrorUtils.TechnicalError(err.toString());
         }
     },
+    executeManagedService: function(resourceObj) {
+        var fields = {};
+        var grAccount = new GlideRecord("customer_account");
+        grAccount.addQuery("registration_code", resourceObj.relatedParty[0].id);
+        grAccount.query();
+        if (grAccount.next()) {
+            fields['account'] = grAccount.getUniqueValue();
+        } else {
+            fields['account'] = "";
+        }
+        var grModel = new GlideRecord("cmdb_model");
+        grModel.addQuery("model_number", resourceObj.serviceSpecification.id);
+        grModel.query();
+        if (grModel.next()) {
+            fields['product'] = grModel.getUniqueValue();
+        } else {
+            fields['product'] = "";
+        }
 
+        fields['sold_product'] = "";
+        fields['active'] = "true";
+        fields['x_24823_tm_id'] = resourceObj.id;
+        fields['install_base_item'] = "";
+        fields['sold_product'] = "";
+        fields['start_date'] = "";
+        fields['end_date'] = "";
+        fields['entitlement_name'] = resourceObj.name;
+
+
+        this.upsertEntitlement(fields);
+    },
+
+    upsertEntitlement: function(fieldArgs) {
+        try {
+
+            var grEntitlement = new GlideRecord("service_entitlement");
+            grEntitlement.addQuery('x_24823_tm_id', fieldArgs['x_24823_tm_id']);
+            grEntitlement.query();
+            if (grEntitlement.next()) {
+                for (var key in fieldArgs) {
+                    if (fieldArgs.hasOwnProperty(key)) {
+                        grEntitlement.setValue(key, fieldArgs[key]);
+
+                    }
+                }
+                grEntitlement.update();
+            } else {
+                for ( key in fieldArgs) {
+                    if (fieldArgs.hasOwnProperty(key)) {
+                        grEntitlement.setValue(key, fieldArgs[key]);
+
+                    }
+                }
+
+                grEntitlement.insert();
+
+            }
+            return grEntitlement;
+        } catch (error) {
+            gs.error("upsertEntitlement >> Error occured" + error.toString());
+        }
+
+    },
     /***
 	 * processRetrieveService -  Will process inbound Resource request for Retrieve Resource Specification
          * @param: (M) requestObj - request object as created in inbound scripted API
@@ -168,7 +240,7 @@ TMF638_ServiceInventory.prototype = {
         try {
 
             var body = {};
-            body.message = "Service is created successfully";
+            body.message = "new Service is created successfully";
             this.logUtils.updateInbLog(this.logObj, JSON.stringify(body), "2", this.SUCCESSFULLY_CREATED_HTTP_CODE);
             responseObj.setStatus(this.SUCCESSFULLY_CREATED_HTTP_CODE);
             responseObj.setBody(body);
@@ -177,18 +249,18 @@ TMF638_ServiceInventory.prototype = {
         }
     },
     type: 'TMF638_ServiceInventory'
-};]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:38:55</sys_created_on>
         <sys_id>66f47db8dbc51010357d29e1ca961991</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>TMF638_ServiceInventory</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_66f47db8dbc51010357d29e1ca961991</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-07-07 06:26:14</sys_updated_on>
+        <sys_updated_on>2020-07-15 09:53:54</sys_updated_on>
     </sys_script_include>
 </record_update>

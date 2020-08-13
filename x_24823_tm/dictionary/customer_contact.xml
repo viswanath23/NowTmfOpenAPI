@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="sys_user" label="Contact" max_length="40" name="customer_contact" sizeclass="49" text_index="true" type="collection">
+        <element label="href" max_length="200" name="x_24823_tm_href" type="string"/>
+    </element>
+</database>

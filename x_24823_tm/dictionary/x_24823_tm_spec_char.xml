@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Specification Characteristic" max_length="40" name="x_24823_tm_spec_char" sizeclass="14" type="collection">
+    <element label="Specification Characteristic" max_length="40" name="x_24823_tm_spec_char" sizeclass="40" type="collection">
         <element label="Associated To" max_length="32" name="associated_to" reference="cmdb_model" type="reference"/>
         <element label="@Base Type" max_length="100" name="base_type" type="string"/>
         <element choice="1" label="Category" mandatory="true" max_length="40" name="category" type="choice">

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Entitlement" max_length="40" name="service_entitlement" sizeclass="9" type="collection">
+        <element label="Id" max_length="100" name="x_24823_tm_id" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Discovery Core" source="com.snc.discovery.core">d433c880db3233000feb8632399619a4</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>arup.sinha</sys_created_by>
+        <sys_created_on>2020-07-14 10:35:03</sys_created_on>
+        <sys_id>f321027cdb029810357d29e1ca9619fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_updated_by>arup.sinha</sys_updated_by>
+        <sys_updated_on>2020-07-14 10:35:03</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

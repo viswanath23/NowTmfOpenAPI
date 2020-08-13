@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="cmdb_ci_appl" label="Cloud Messaging Service" max_length="40" name="cmdb_ci_cloud_messaging_service" sizeclass="6" type="collection">
+        <element label="hasStarted" max_length="8" name="x_24823_tm_hasstarted" type="boolean"/>
+        <element label="href" max_length="1000" name="x_24823_tm_href" type="string"/>
+        <element label="isServiceEnabled" max_length="8" name="x_24823_tm_isserviceenabled" type="boolean"/>
+        <element label="isStateful" max_length="8" name="x_24823_tm_isstateful" type="boolean"/>
+        <element label="startMode" max_length="32" name="x_24823_tm_startmode" type="integer"/>
+        <element label="state" max_length="32" name="x_24823_tm_state" type="string"/>
+    </element>
+</database>

@@ -45,7 +45,7 @@
         <reference_floats>false</reference_floats>
         <reference_key/>
         <reference_qual>sys_scope=f770b6d1db185050357d29e1ca96196f^EQ</reference_qual>
-        <reference_qual_condition table="sys_ws_operation">sys_scope=f770b6d1db185050357d29e1ca96196f^EQ<item display_table="sys_scope" display_value="TMF OpenApi Connector" endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value="f770b6d1db185050357d29e1ca96196f"/>
+        <reference_qual_condition table="sys_ws_operation">sys_scope=f770b6d1db185050357d29e1ca96196f^EQ<item display_table="sys_scope" display_value="TMF catalyst" endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value="f770b6d1db185050357d29e1ca96196f"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </reference_qual_condition>
         <reference_type/>
@@ -58,9 +58,9 @@
         <sys_id>96ef47d4db7d5010357d29e1ca961908</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Applicable for REST Resources</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_dictionary_x_24823_tm_open_api_event_applicable_for_rest_resources</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
         <sys_updated_on>2020-06-30 17:04:18</sys_updated_on>

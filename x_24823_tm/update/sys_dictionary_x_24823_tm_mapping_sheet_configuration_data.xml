@@ -56,9 +56,9 @@
         <sys_id>89ca81fadb959410357d29e1ca96197f</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Configuration Data</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_dictionary_x_24823_tm_mapping_sheet_configuration_data</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
         <sys_updated_on>2020-06-13 04:59:37</sys_updated_on>

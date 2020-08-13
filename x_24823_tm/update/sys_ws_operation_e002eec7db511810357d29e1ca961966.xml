@@ -28,9 +28,9 @@
         <sys_id>e002eec7db511810357d29e1ca961966</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Delete Product Offering</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_ws_operation_e002eec7db511810357d29e1ca961966</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
         <sys_updated_on>2020-06-19 12:15:32</sys_updated_on>

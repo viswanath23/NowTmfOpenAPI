@@ -38,7 +38,7 @@
     </sys_ws_operation>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</application>
+        <application display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</application>
         <file_path/>
         <instance_id>1af89848db38bb003050ac44d496195f</instance_id>
         <instance_name>dev79735</instance_name>
@@ -75,10 +75,10 @@
         <sys_metadata>d0062b49db511010357d29e1ca96191c</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>List Services</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_scope_delete display_value="">531a72eddb4d4eea9fa4f90fe2196364</sys_scope_delete>
         <sys_update_name>sys_ws_operation_d0062b49db511010357d29e1ca96191c</sys_update_name>
         <sys_update_version display_value="sys_ws_operation_d0062b49db511010357d29e1ca96191c">8fa6eb89db511010357d29e1ca9619e6</sys_update_version>

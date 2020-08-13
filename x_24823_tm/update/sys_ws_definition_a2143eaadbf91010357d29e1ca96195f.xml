@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_24823_tm/resourceoperationbp</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>false</is_versioned>
+        <name>resourceoperationBP</name>
+        <namespace>x_24823_tm</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>resourceoperationbp</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>arup.sinha</sys_created_by>
+        <sys_created_on>2020-07-07 14:32:10</sys_created_on>
+        <sys_id>a2143eaadbf91010357d29e1ca96195f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>resourceoperationBP</sys_name>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_ws_definition_a2143eaadbf91010357d29e1ca96195f</sys_update_name>
+        <sys_updated_by>arup.sinha</sys_updated_by>
+        <sys_updated_on>2020-07-07 14:32:10</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

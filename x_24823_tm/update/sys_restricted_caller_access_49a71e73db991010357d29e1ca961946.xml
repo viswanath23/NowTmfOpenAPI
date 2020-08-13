@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source>09d65a33db991010357d29e1ca9619a4</source>
+        <source_scope display_value="Global">global</source_scope>
+        <source_table>sys_script_include</source_table>
+        <source_type>2</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>viswanath23@gmail.com</sys_created_by>
+        <sys_created_on>2020-06-16 13:07:51</sys_created_on>
+        <sys_id>49a71e73db991010357d29e1ca961946</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>global</sys_name>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_49a71e73db991010357d29e1ca961946</sys_update_name>
+        <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
+        <sys_updated_on>2020-06-16 13:10:06</sys_updated_on>
+        <target>7ea69dfbdb151010357d29e1ca96199d</target>
+        <target_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</target_scope>
+        <target_table>sys_script_include</target_table>
+        <target_type>2</target_type>
+    </sys_restricted_caller_access>
+</record_update>

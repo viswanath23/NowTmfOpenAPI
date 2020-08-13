@@ -8,7 +8,7 @@
         <description/>
         <name>TMF639_ResourceInventory</name>
         <script><![CDATA[var TMF639_ResourceInventory = Class.create();
-TMF639_ResourceInventory.prototype = {
+TMF639_ResourceInventory.prototype =  Object.extendsObject(x_24823_tm.EventListnerUtils,{
     initialize: function() {
         this.logUtils = new x_24823_tm.InboundWsLogUtils();
         this.logObj = "";
@@ -96,7 +96,8 @@ TMF639_ResourceInventory.prototype = {
 
         } catch (err) {
             gs.error("TMF639_ResourceInventory::processDeleteResource >> Error occured " + err.toString());
-        }
+        return x_24823_tm.WsErrorUtils.TechnicalError(err.toString());
+		}
     },
 
     /***
@@ -148,18 +149,18 @@ TMF639_ResourceInventory.prototype = {
         }
     },
     type: 'TMF639_ResourceInventory'
-};]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>viswanath23@gmail.com</sys_created_by>
         <sys_created_on>2020-05-25 16:40:19</sys_created_on>
         <sys_id>874571f8dbc51010357d29e1ca961961</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>TMF639_ResourceInventory</sys_name>
-        <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
         <sys_policy>protected</sys_policy>
-        <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+        <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
         <sys_update_name>sys_script_include_874571f8dbc51010357d29e1ca961961</sys_update_name>
         <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
-        <sys_updated_on>2020-07-07 06:29:15</sys_updated_on>
+        <sys_updated_on>2020-07-08 08:13:34</sys_updated_on>
     </sys_script_include>
 </record_update>

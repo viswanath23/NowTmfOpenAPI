@@ -57,9 +57,9 @@
             <sys_id>26d150dadb755010357d29e1ca9619a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Service Model - Telecom</sys_name>
-            <sys_package display_value="TMF OpenApi Connector" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+            <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
             <sys_policy/>
-            <sys_scope display_value="TMF OpenApi Connector">f770b6d1db185050357d29e1ca96196f</sys_scope>
+            <sys_scope display_value="TMF catalyst">f770b6d1db185050357d29e1ca96196f</sys_scope>
             <sys_update_name>sys_ui_related_cmdb_service_product_model_telecom</sys_update_name>
             <sys_updated_by>viswanath23@gmail.com</sys_updated_by>
             <sys_updated_on>2020-07-06 08:03:49</sys_updated_on>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Customer Service Install Base Management" source="sn_install_base">7f1fc05477122300d7159b71a91061b7</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>arup.sinha</sys_created_by>
+        <sys_created_on>2020-07-17 09:02:49</sys_created_on>
+        <sys_id>46d8417ddbca9c10357d29e1ca96196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="TMF catalyst" source="x_24823_tm">f770b6d1db185050357d29e1ca96196f</sys_package>
+        <sys_updated_by>arup.sinha</sys_updated_by>
+        <sys_updated_on>2020-07-17 09:02:49</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
